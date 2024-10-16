@@ -1,19 +1,29 @@
+body{
+    margin: 0;
+}
+
 header {
     background-color: #DAEBF2;
+    height: 30%;
 }
-#title-img{
+
+#title-img {
     width: 300px;
     height: 100px;
 }
 
 main {
+    height: 70%;
+    display: grid;
     gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 button {
-    width: 100px;
+    width: 150px;
     height: 50px;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: #8EAFBC;
+    color: #F9F9F9;
     border-radius: 10px;
 }
