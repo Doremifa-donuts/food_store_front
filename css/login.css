@@ -1,10 +1,11 @@
 body{
     margin: 0;
+    height: 100vh;
 }
 
 header {
     background-color: #DAEBF2;
-    height: 30%;
+    height: 15%;
 }
 
 #title-img {
@@ -14,14 +15,12 @@ header {
 
 main {
     height: 70%;
-    display: grid;
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
+    
+    
 }
 
 button {
-    width: 150px;
+    width: 200px;
     height: 50px;
     background-color: #8EAFBC;
     color: #F9F9F9;
