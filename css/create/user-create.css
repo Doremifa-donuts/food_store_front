@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     height: 100vh;
 }
@@ -16,20 +16,14 @@ header {
 }
 
 
-main{
+main {
     height: 70%;
-    /* 要素を縦並びにする */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* 真ん中よせ */
-    align-items: center;
     /* 余白をつける */
     gap: 10px;
 }
 
 /* 入力項目（親元） */
-div{
+div {
     /* 要素を縦並びにする */
     display: flex;
     flex-direction: column;
@@ -41,13 +35,13 @@ div{
 }
 
 /* 入力ラベル */
-label{
+label {
     /* ラベルのフォントの変更 */
     font-size: 30px;
 }
 
 /* 入力項目 */
-input{
+input {
     /* テキストボックスの幅を指定する */
     width: 300px;
     height: 30px;
@@ -64,3 +58,16 @@ input{
 
 }
 
+/* 次へボタン */
+button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 5px;
+    border-radius: 20px;
+    border: 1px solid #BECED5;
+    background-color: #BECED5;
+    font-size: 30px;
+    margin-left: 60px;
+    /* 余白をつける */
+    margin-bottom: 10px;
+}
