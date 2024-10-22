@@ -14,3 +14,46 @@ header {
     width: 300px;
     height: 100px;
 }
+
+
+main{
+    height: 70%;
+    /* 要素を縦並びにする */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 真ん中よせ */
+    align-items: center;
+    /* 余白をつける */
+    gap: 10px;
+}
+
+/* 入力項目（親元） */
+div{
+    /* 要素を縦並びにする */
+    display: flex;
+    flex-direction: column;
+    /* 真ん中よせ */
+    justify-content: center;
+    align-items: center;
+    /* 余白をつける */
+    gap: 10px;
+}
+
+/* 入力項目 */
+input{
+    /* テキストボックスの幅を指定する */
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    /* テキストボックスの枠線のデザインの変更 */
+    border: 1px solid #DAEBF2;
+    background-color: #DAEBF2;
+    /* テキストボックスのフォントの変更 */
+    font-size: 15px;
+    /* 真ん中よせ */
+    text-align: center;
+    /* 余白をつける */
+    margin-bottom: 10px;
+
+}
