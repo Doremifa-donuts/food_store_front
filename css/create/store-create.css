@@ -17,6 +17,7 @@ header {
 
 
 main {
+    margin-top: auto;
     height: 70%;
     /* 余白をつける */
     gap: 10px;
@@ -28,7 +29,7 @@ main {
 }
 
 /* 入力項目（親元） */
-div {
+.input {
     /* 要素を縦並びにする */
     display: flex;
     flex-direction: column;
@@ -63,6 +64,14 @@ input {
 
 }
 
+#button {
+    display: flex;
+    justify-content:space-around;
+    margin-top: auto;
+    /* TODO 仮指定 */
+    gap: 300px;
+}
+
 /* 次へボタン */
 button {
     /* ボタンの幅を指定する */
@@ -77,8 +86,5 @@ button {
     font-size: 25px;
     /* 文字の色 */
     color: white;
-    
-    /* 右寄せ */
-    margin-left: 50%;
     margin-top: 20px;
 }
