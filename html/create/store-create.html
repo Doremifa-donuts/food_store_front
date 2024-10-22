@@ -13,17 +13,37 @@
     <main>
 
         <div class="input">
-            <label for="image">メールアドレス</label>
-            <input type="image" id="image">
+            <label for="file">画像</label>
+            <input type="file" id="file">
         </div>
         <div class="input">
-            <label for="name">電話番号</label>
+            <label for="name">店舗名</label>
             <input type="name" id="name">
         </div>
-        <div class="input">
-            <label for="text">パスワード</label>
-            <input type="text" id="time_text">
+        <!-- TODO id 名きもい -->
+        <div class="group">
+
+            <div class="input">
+                <label for="text">住所</label>
+                <input type="text" id="text_address">
+            </div>
+            <div class="input">
+                <label for="text">営業時間</label>
+                <input type="text" id="text_time">
+            </div>
         </div>
+        <div class="group">
+
+            <div class="input">
+                <label for="url">url</label>
+                <input type="url" id="url">
+            </div>
+            <div class="input">
+                <label for="text">概要</label>
+                <input type="text" id="text_memo">
+            </div>
+        </div>
+
     
         <div id="button">
             <button id="back">戻る</button>
