@@ -40,6 +40,12 @@ div{
     gap: 10px;
 }
 
+/* 入力ラベル */
+label{
+    /* ラベルのフォントの変更 */
+    font-size: 30px;
+}
+
 /* 入力項目 */
 input{
     /* テキストボックスの幅を指定する */
@@ -50,10 +56,11 @@ input{
     border: 1px solid #BECED5;
     background-color: #BECED5;
     /* テキストボックスのフォントの変更 */
-    font-size: 15px;
+    font-size: 30px;
     /* 真ん中よせ */
     text-align: center;
     /* 余白をつける */
     margin-bottom: 10px;
 
 }
+
