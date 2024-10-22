@@ -8,3 +8,9 @@ header {
     height: 15%;
 
 }
+
+
+#header-img {
+    width: 300px;
+    height: 100px;
+}
