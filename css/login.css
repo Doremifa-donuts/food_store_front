@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     height: 100vh;
 }
@@ -6,7 +6,6 @@ body{
 header {
     background-color: #DAEBF2;
     height: 15%;
-
 }
 
 #header-img {
@@ -23,25 +22,15 @@ main {
     gap: 10px;
 }
 
-/* 背景をぼかす設定 */
 #title {
-    position: relative;
-    width: 300px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(142, 175, 188, 0.7); /* 半透明の背景 */
-    filter: blur(5px); /* 背景ぼかし効果 */
+    background-color: #8EAFBC;
+    filter: blur(2px);
     border-radius: 50%;
-    z-index: 1; /* 他の要素の上に表示 */
 }
 
 #title-img {
-    position: absolute; /* ぼかし背景の上に表示するために絶対配置 */
     width: 300px;
     height: 100px;
-    z-index: 2; /* ぼかし効果の上に配置 */
 }
 
 button {
@@ -50,10 +39,4 @@ button {
     background-color: #8EAFBC;
     color: #F9F9F9;
     border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #6B8F9E;
 }
