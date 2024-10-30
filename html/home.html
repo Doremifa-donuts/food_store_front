@@ -24,18 +24,23 @@
     </header>
     <main>
         <!-- お店側の入力欄 -->
-        <div>
+        <div id="store-input">
+            <!-- 表示切り替えボタン -->
+            <select name="toggle" id="toggle">
+                <option value="0">予約状況</option>
+                <option value="1">レビュー</option>
+            </select>
             <!-- 混雑情報選択ボタン -->
-            <div>
-                <button>来客なし</button>
-                <button>空席あり</button>
-                <button>満席</button>
+            <div id="congestion">
+                <button id="none">来客なし</button>
+                <button id="some">空席あり</button>
+                <button id="full">満席</button>
             </div>
             <!-- お助けブーストボタン -->
             <button>ブースト</button>
 
             <!-- お助けブースト表示 -->
-            <div>
+            <div id="boost">
                 <div>
                     <div>お助けブースト</div>
                     <span>今範囲内に</span>
@@ -46,11 +51,7 @@
                 <span>人</span>
             </div>
         </div>
-        <!-- 表示切り替えボタン -->
-        <select name="toggle" id="toggle">
-            <option value="0">予約状況</option>
-            <option value="1">レビュー</option>
-        </select>
+
         <div>
             <p>予約状況</p>
             <!-- 予約状況表示 -->
