@@ -25,11 +25,13 @@
     <main>
         <!-- お店側の入力欄 -->
         <div id="store-input">
-            <!-- 表示切り替えボタン -->
+            <div id="toggle-btn">
+                <!-- 表示切り替えボタン -->
             <select name="toggle" id="toggle">
                 <option value="0">予約状況</option>
                 <option value="1">レビュー</option>
             </select>
+            </div>
             <!-- 混雑情報選択ボタン -->
             <div id="congestion">
                 <button id="full">満席</button>
@@ -42,15 +44,17 @@
             </div>
 
             <!-- お助けブースト表示 -->
-            <div id="boost">
-                <div>
-                    <div>お助けブースト</div>
-                    <span>今範囲内に</span>
+            <div id="boost-content">
+                <div id="boost">
+                    <div>
+                        <div>お助けブースト</div>
+                        <span>今範囲内に</span>
+                    </div>
+                    <div>
+                        人数
+                    </div>
+                    <span>人</span>
                 </div>
-                <div>
-                    人数
-                </div>
-                <span>人</span>
             </div>
         </div>
 
