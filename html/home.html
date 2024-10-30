@@ -32,12 +32,14 @@
             </select>
             <!-- 混雑情報選択ボタン -->
             <div id="congestion">
-                <button id="none">来客なし</button>
-                <button id="some">空席あり</button>
                 <button id="full">満席</button>
+                <button id="some">空席あり</button>
+                <button id="none">来客なし</button>
             </div>
             <!-- お助けブーストボタン -->
-            <button>ブースト</button>
+            <div id="boost-btn">
+                <button id="boostBtn">ブースト</button>
+            </div>
 
             <!-- お助けブースト表示 -->
             <div id="boost">
@@ -52,14 +54,17 @@
             </div>
         </div>
 
-        <div>
-            <p>予約状況</p>
-            <!-- 予約状況表示 -->
+        <div id="content">
+            <div>
+                <p>予約状況</p>
+                <!-- 予約状況表示 -->
+            </div>
+            <div>
+                <p>レビュー</p>
+                <!-- レビュー表示 -->
+            </div>
         </div>
-        <div>
-            <p>レビュー</p>
-            <!-- レビュー表示 -->
-        </div>
+        
     </main>
 </body>
 

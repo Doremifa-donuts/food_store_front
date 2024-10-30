@@ -1,49 +1,82 @@
-header{
-    display:flex;
+header {
+    display: flex;
     align-items: center;
     background-color: #DAEBF2;
 }
 
-ul{
-    display:flex;
+ul {
+    display: flex;
 }
 
-li{
+li {
     list-style: none;
     width: 50px;
     height: 50px;
 }
-main{
-    width: 100vw;
-    margin-top: auto;
-}
 
-#store-input{
-    display:flex;
+
+/* main要素 */
+main {
     width: 100%;
+    height: 85%;
+    /* 余白をつける */
+    gap: 10px;
 }
 
-#congestion{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
+
+/* お店側の入力欄 */
+#store-input {
+    display: flex;
+    width: 100vw;
+    height: 35%;
+    align-items: end;
+}
+/* 切り替えボタン */
+#toggle {
+  margin: 0 30px;
+    width: 150px;
     height: 50px;
 }
+/* 混雑情報入力ボタン */
+#congestion {
+    
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+    width: 300px;
+    height: 100px;
+}
 
-#congestion #some{
+/* 混雑情報空席 */
+#congestion #some {
     background-color: #BECED5;
     color: #F9F9F9;
     border-radius: 10px;
     margin: 0 10px;
 }
 
-#boost{
-    float: right;
-    background-color: #DAEBF2;
-    display:flex;
+#boost-btn{
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 300px;
     height: 50px;
+}
+
+/* ブースト表示 */
+#boost {
+    margin-top: 20px;
+    background-color: #DAEBF2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+
+/* 予約状況かレビュー */
+#content {
+    height: 65%;
 }
