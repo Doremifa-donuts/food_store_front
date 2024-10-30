@@ -133,3 +133,12 @@ main {
 #content {
     height: 65%;
 }
+
+
+
+#boostDialog{
+    width: 400px;
+    height: 500px;
+    background-color: #DAEBF2;
+    border-radius: 10px;
+}
