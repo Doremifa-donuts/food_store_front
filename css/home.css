@@ -31,13 +31,15 @@ main {
     height: 35%;
     align-items: end;
 }
+
 /* 切り替えボタン */
 #toggle-btn {
-  margin: 0 50px;
+    margin: 0 50px;
     width: 350px;
     height: 50px;
 }
-#toggle{
+
+#toggle {
     width: 50%;
     height: 80%;
     margin: 20px;
@@ -46,19 +48,21 @@ main {
     color: #F9F9F9;
     font-size: 20px;
 }
+
 /* 混雑情報入力ボタン */
 #congestion {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     width: 410px;
     height: 100%;
-   
+
     display: flex;
     flex-direction: column;
     align-items: end;
 }
+
 #congestion button {
-    
+
     background-color: #BECED5;
     color: #F9F9F9;
     border-radius: 45px;
@@ -67,6 +71,7 @@ main {
     padding: 10px;
     height: 60%;
 }
+
 /* 混雑情報空席 */
 #congestion #some {
     width: 100px;
@@ -75,14 +80,15 @@ main {
     margin: 0 10px;
 }
 
-#boost-btn{
+#boost-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width:250px;
+    width: 250px;
     height: 80px;
 }
-#boostBtn{
+
+#boostBtn {
     background-color: #BECED5;
     color: #F9F9F9;
     border-radius: 45px;
@@ -96,15 +102,24 @@ main {
     width: 350px;
     height: 65%;
 }
+
 #boost {
     background-color: #DAEBF2;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   width: 80%;
+    width: 80%;
     height: 80px;
     padding: 0 20px;
     border-radius: 10px;
+}
+
+#num {
+    margin-top: calc(18% - 18vh);
+    height: 100%;
+    font-size: 100px;
+    color: #000000;
+    font-weight: 100;
 }
 
 
