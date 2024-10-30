@@ -114,6 +114,11 @@ main {
     border-radius: 10px;
 }
 
+#boost div span {
+    float:right;
+    font-size: xx-small;
+}
+
 #num {
     margin-top: calc(18% - 18vh);
     height: 100%;
