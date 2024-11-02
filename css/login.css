@@ -22,15 +22,9 @@ main {
     gap: 10px;
 }
 
-#title {
-    background-color: #8EAFBC;
-    filter: blur(2px);
-    border-radius: 50%;
-}
-
 #title-img {
-    width: 300px;
-    height: 100px;
+    width: 500px;
+    height: auto;
 }
 
 button {
