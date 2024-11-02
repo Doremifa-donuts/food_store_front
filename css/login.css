@@ -35,9 +35,9 @@ main {
     border-radius: 10px;
 }
 
-login-dialog {
-    width: 100px;
-    height: auto;
+#login-dialog {
+    width: 400px;
+    height: 50%;
     background-color: #F9F9F9;
     border-radius: 10px;
 }
