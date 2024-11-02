@@ -7,21 +7,22 @@ main {
     gap: 10px;
 }
 
-#title {
-    background-color: #8EAFBC;
-    filter: blur(2px);
-    border-radius: 50%;
-}
-
 #title-img {
-    width: 300px;
-    height: 100px;
+    width: 500px;
+    height: auto;
 }
 
-button {
+.select-btn {
     width: 200px;
     height: 50px;
     background-color: #8EAFBC;
     color: #F9F9F9;
+    border-radius: 10px;
+}
+
+#login-dialog {
+    width: 400px;
+    height: 50%;
+    background-color: #F9F9F9;
     border-radius: 10px;
 }
