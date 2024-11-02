@@ -9,6 +9,11 @@ main {
     align-items: center;
 }
 
+h2 {
+    font-size: 30px;
+    margin: auto;
+}   
+
 /* 入力項目（親元） */
 div {
     /* 要素を縦並びにする */
@@ -32,7 +37,7 @@ input {
     /* テキストボックスの幅を指定する */
     width: 300px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 5px;
     /* テキストボックスの枠線のデザインの変更 */
     border: 1px solid #BECED5;
     background-color: #BECED5;
