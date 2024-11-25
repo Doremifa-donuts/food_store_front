@@ -1,23 +1,52 @@
 @font-face {
     font-family: 'Zen Maru Gothic';
-    src: url('ZenMaruGothic-Regular.ttf')format('truetype');
+    src: url('/font/ZenMaruGothic-Medium.ttf')format('truetype');
+}
+
+*{
+    font-family: 'Zen Maru Gothic';
 }
 
 body {
     margin: 0;
     height: 100vh;
     background-color: #F9F9F9;
-    font-family: 'Zen Maru Gothic';
 }
 
 header {
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 8vh;
     background-color: #DAEBF2;
 }
 
+button{
+    border: none;
+}
+
+/* menu icon */
 #header-img {
     height: 100%;
     margin-left: 2vw;
+}
+
+header a {
+    height: 100%;
+    text-decoration: none;
+}
+
+.header_icon{
+    width: 45px;
+}
+
+#header_logo a {
+    height: 45px;
+}
+
+#header_logo {
+    display: flex;
+    gap: 25px;
+    margin-right: 2vw;
 }
 

@@ -1,27 +1,12 @@
-
-header {
-    display: flex;
-    align-items: center;
-    background-color: #DAEBF2;
+header{
+    justify-content: space-between;
 }
-
-ul {
-    display: flex;
-}
-
-li {
-    list-style: none;
-    width: 50px;
-    height: 50px;
-}
-
 
 /* main要素 */
 main {
     width: 100%;
     height: 85%;
     /* 余白をつける */
-    gap: 10px;
 }
 
 
@@ -35,18 +20,21 @@ main {
 
 /* 切り替えボタン */
 #toggle-btn {
-    margin: 0 50px;
     width: 350px;
     height: 50px;
+    margin: 0 50px;
+    
+
 }
 
 #toggle {
     width: 50%;
     height: 80%;
     margin: 20px;
+    border: none;
     border-radius: 10px;
-    background-color: #BECED5;
-    color: #F9F9F9;
+    border: 2px solid #8EAFBC;
+    color: #000000;
     font-size: 20px;
 }
 
@@ -56,14 +44,12 @@ main {
     text-orientation: upright;
     width: 410px;
     height: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
 #congestion button {
-
     background-color: #BECED5;
     color: #F9F9F9;
     border-radius: 45px;
@@ -75,7 +61,7 @@ main {
 
 /* 混雑情報空席 */
 #congestion #some {
-    width: 100px;
+    width: 70px;
     height: 90%;
     font-size: 30px;
     margin: 0 10px;
