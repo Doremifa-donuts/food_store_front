@@ -12,17 +12,29 @@ main {
     height: auto;
 }
 
-.select-btn {
-    width: 200px;
-    height: 50px;
-    background-color: #8EAFBC;
-    color: #F9F9F9;
-    border-radius: 10px;
+form{
+
 }
 
-#login-dialog {
-    width: 400px;
-    height: 50%;
-    background-color: #F9F9F9;
+label{
+    display: block;
+}
+
+input{
+    background-color: #BECED5;
+    border: none;
     border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+}
+
+.select-btn {
+    width: 150px;
+    height: 30px;
+    background-color: #8EAFBC;
+    font-size: 18px;
+    color: #F9F9F9;
+    border: none;
+    border-radius: 50px;
 }

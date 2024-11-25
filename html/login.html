@@ -15,21 +15,27 @@
         <img id="header-img" src="/image/title.png" alt="title">
     </header>
     <main>
-        <div id="title">
-            <img id="title-img" src="/image/foodShuffle_title.jpg" alt="title">
-        </div>
-        <button class="select-btn" id="login-btn">ログイン</button>
-        <button class="select-btn">新規登録</button>
-        <dialog id="login-dialog">
-            <button id="close-btn">×</button>
-            <form id="login-form">
+
+        <form id="login-form">
+            <!-- 店舗番号 -->
+            <div id="login_Snum">
                 <label for="store-number">店舗番号</label>
                 <input type="text" id="store-number" name="store-number" required>
+            </div>
+
+            <!-- パスワード -->
+            <div id="login_pass">
                 <label for="password">パスワード</label>
                 <input type="password" id="password" name="password" required>
-                <button type="submit">ログイン</button>
-            </form>
-        </dialog>
+            </div>
+
+            <button class="select-btn" id="login-btn">ログイン</button>
+
+        </form>
+
+        <button class="select-btn">新規登録</button>
+
+        
     </main>
 
     
