@@ -21,41 +21,40 @@
     </header>
 
     <main>
-        <!-- お店側の入力欄 -->
-        <div id="store-input">
-            <div id="toggle-btn">
-                <!-- 表示切り替えボタン -->
+        <!-- お助けブースト表示 -->
+        <div id="boost">
+            <div class="boost_text">
+                <p>お助けブースト</p>
+                <span>今範囲内に</span>
+            </div>
+            <div id="boost_num">
+                10
+            </div>
+            <p class="boost_text">人</p>
+        </div>
+
+
+        <!-- お店側の入力欄 -->      
+            <div id="congestion_outside">
+                <!-- 混雑情報選択ボタン -->
+                <div id="congestion">
+                    <button id="full" class="congestion_situation">来客なし</button>
+                    <button id="some" class="congestion_situation congestion_Big">空席あり</button>
+                    <button id="none" class="congestion_situation">満席</button>
+                </div>
+                
+                <!-- お助けブーストボタン -->
+                <div id="boost-btn">
+                    <button>ブースト</button>
+                </div>
+            </div>
+
+        <!-- 表示切り替えボタン -->
+        <div id="toggle-btn">
             <select name="toggle" id="toggle">
                 <option value="0">予約状況</option>
                 <option value="1">レビュー</option>
             </select>
-            </div>
-
-            <!-- 混雑情報選択ボタン -->
-            <div id="congestion">
-                <button id="full">満席</button>
-                <button id="some">空席あり</button>
-                <button id="none">来客なし</button>
-            </div>
-            
-            <!-- お助けブーストボタン -->
-            <div id="boost-btn">
-                <button id="boostBtn">ブースト</button>
-            </div>
-
-            <!-- お助けブースト表示 -->
-            <div id="boost-content">
-                <div id="boost">
-                    <div>
-                        <div>お助けブースト</div>
-                        <span>今範囲内に</span>
-                    </div>
-                    <div id="num">
-                        10
-                    </div>
-                    <span>人</span>
-                </div>
-            </div>
         </div>
 
         <div id="content">
@@ -69,20 +68,37 @@
             </div>
         </div>
         <!-- お助けブーストのダイアログ -->
-        <dialog id="boostDialog" class="dialog">
-            <div id="dialog-container">
-                <header>
+        <dialog id="boostDialog" class="dialog" open="">
+            <div id="dialog_container">
+                <div id="Free_time" class="dialog_item">
                     <p>空き時間</p>
-                    <form action=""></form>
-                    <button id="closeButton" type="button">
-                        <p>閉じる</p>
-                    </button>
-                </header>
-                <div>Message</div>
-                <form method="dialog">
-                    <button type="submit" value="OK">Ok</button>
-                    <button type="submit" value="CANCEL">Cancel</button>
-                </form>
+                        <form action="">
+                            <div id="dialog_time">
+                                <input type="time" name="before">
+                                <span>～</span>
+                                <input type="time" name="after">
+                            </div>
+                        </form>
+                    
+                </div>
+
+                <div id="Great_value" class="dialog_item">
+                    <p>お得情報</p>
+                    <form action="">
+                        <textarea name="Great_value" id="great_text"></textarea>
+                    </form>
+                </div>
+
+                <div id="Situation" class="dialog_item">
+                    <p>状況説明</p>
+                    <form method="dialog">
+                        <textarea name="Situation_explanation" id="situation_text"></textarea>
+                        <div>
+                            <button type="submit" value="OK">Ok</button>
+                            <button type="submit" value="CANCEL">Cancel</button>
+                        </div>
+                    </form>
+                </div>
             </div>
           </dialog>
         

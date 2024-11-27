@@ -25,6 +25,14 @@ button{
     border: none;
 }
 
+p{
+    margin: 0;
+}
+
+textarea{
+    resize: none;
+}
+
 /* menu icon */
 #header-img {
     height: 100%;

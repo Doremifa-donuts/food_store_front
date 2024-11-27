@@ -10,73 +10,59 @@ main {
 }
 
 
-/* お店側の入力欄 */
-#store-input {
-    display: flex;
-    width: 100vw;
-    height: 35%;
-    align-items: end;
-}
-
 /* 切り替えボタン */
-#toggle-btn {
-    width: 350px;
-    height: 50px;
-    margin: 0 50px;
-    
-
+#toggle-btn{
+    margin-left: 40px;
 }
 
 #toggle {
-    width: 50%;
-    height: 80%;
-    margin: 20px;
+    width: 170px;
+    height: 40px;
+    text-align: center;
+    color: #000000;
+    font-size: 20px; 
     border: none;
     border-radius: 10px;
     border: 2px solid #8EAFBC;
-    color: #000000;
-    font-size: 20px;
+}
+
+/* 混雑情報 */
+#congestion_outside {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 /* 混雑情報入力ボタン */
 #congestion {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    width: 410px;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
 }
 
-#congestion button {
+.congestion_situation{
+    width: 60px;
+    height: 150px;
+    margin: 0 10px;
+    padding: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     background-color: #BECED5;
     color: #F9F9F9;
     border-radius: 45px;
-    margin: 0 10px;
     font-size: 20px;
-    padding: 10px;
-    height: 60%;
 }
 
-/* 混雑情報空席 */
-#congestion #some {
-    width: 70px;
-    height: 90%;
+/* 選択中は大きく */
+.congestion_Big {
+    width: 90px;
+    height: 220px;
     font-size: 30px;
     margin: 0 10px;
 }
 
-#boost-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 80px;
-}
-
-#boostBtn {
-    background-color: #BECED5;
+/* ブーストボタン */
+#boost-btn button {
+    background-color: #8EAFBC;
     color: #F9F9F9;
     border-radius: 45px;
     font-size: 20px;
@@ -84,37 +70,48 @@ main {
     height: 60%;
 }
 
-/* ブースト表示 */
-#boost-content {
-    width: 350px;
-    height: 65%;
-}
 
+/* ブースト表示 */
 #boost {
-    background-color: #DAEBF2;
+    position: relative;
+    top: 5vh;
+    left: 80%;
+    background-color: #8EAFBC;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    width: 80%;
-    height: 80px;
-    padding: 0 20px;
+    width: 220px;
+    height: 40px;
+    padding: 5px 20px;
     border-radius: 10px;
 }
 
-#boost div span {
-    float:right;
+.boost_text {
+    color: #F4F4F4;
+}
+
+.boost_text p {
+    font-weight: 600;
+}
+
+.boost_text span {
+    float: right;
+    font-weight: 100;
     font-size: xx-small;
 }
 
-#num {
-    margin-top: calc(18% - 18vh);
-    height: 100%;
-    font-size: 100px;
-    color: #000000;
-    font-weight: 100;
+#boost_num {
+    position: relative;
+    top: -120%;
+    height: 120%;
+    font-size: 80px;
+    color: #C45252;
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px 0 #000000, -1.5px -1.5px 0 #000000,
+                -1.5px 1.5px 0 #000000, 1.5px -1.5px 0 #000000,
+                0px 1.5px 0 #000000,  0 -1.5px 0 #000000,
+                -1.5px 0 0 #000000, 1.5px 0 0 #000000;
 }
-
-
 
 /* 予約状況かレビュー */
 #content {
@@ -122,10 +119,70 @@ main {
 }
 
 
-
+/* ダイアログ */
 #boostDialog{
     width: 400px;
     height: 500px;
-    background-color: #DAEBF2;
+    background-color: #ffff;
+    border: #8EAFBC 3px solid;
     border-radius: 10px;
+}
+
+#dialog_container{
+    text-align: center;
+}
+
+.dialog_item{
+    margin: 40px 0;
+
+}
+
+#dialog_time{
+    display: flex;
+    margin: auto;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#boostDialog p{
+    font-size: 20px;
+}
+
+#boostDialog span{
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+#great_text{
+    width: 70%;
+    height: 70px;
+    background-color: #BECED5;
+    border: none;
+    border-radius: 10px;
+}
+
+#situation_text{
+    width: 70%;
+    height: 150px;
+    background-color: #BECED5;
+    border: none;
+    border-radius: 10px;
+}
+
+/* 時間入力欄 */
+#boostDialog input[type="time"]{
+    height: 35px;
+    background-color: #ffffff00;
+    font-size: 30px;
+    font-family: 'Zen Maru Gothic';
+    border: none;
+  }
+  
+input[type="time"]::-webkit-calendar-picker-indicator {
+margin: 0;
+background: none;
+position: absolute;
+width: 65px;
+height: 35px;
 }
