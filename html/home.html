@@ -34,20 +34,21 @@
         </div>
 
 
-        <!-- お店側の入力欄 -->      
-            <div id="congestion_outside">
-                <!-- 混雑情報選択ボタン -->
-                <div id="congestion">
-                    <button id="full" class="congestion_situation">来客なし</button>
-                    <button id="some" class="congestion_situation congestion_Big">空席あり</button>
-                    <button id="none" class="congestion_situation">満席</button>
-                </div>
-                
-                <!-- お助けブーストボタン -->
-                <div id="boost-btn">
-                    <button>ブースト</button>
-                </div>
+        <!-- お店側の入力欄 -->
+        <div id="flex_item">
+            <!-- 混雑情報選択ボタン -->
+            <div id="congestion">
+                <button id="full" class="congestion_situation">来客なし</button>
+                <button id="some" class="congestion_situation congestion_Big">空席あり</button>
+                <button id="none" class="congestion_situation">満席</button>
             </div>
+        
+            <!-- お助けブーストボタン -->
+            <div id="boost-btn">
+                <button>ブースト</button>
+            </div>
+        </div>
+            
 
         <!-- 表示切り替えボタン -->
         <div id="toggle-btn">
@@ -58,15 +59,17 @@
         </div>
 
         <div id="content">
-            <div>
+            <div id="reservation" class="main_content">
                 <p>予約状況</p>
                 <!-- 予約状況表示 -->
             </div>
-            <div>
+            <div id="review" class="main_content">
                 <p>レビュー</p>
                 <!-- レビュー表示 -->
             </div>
         </div>
+
+
         <!-- お助けブーストのダイアログ -->
         <dialog id="boostDialog" class="dialog" open="">
             <div id="dialog_container">
@@ -93,14 +96,24 @@
                     <p>状況説明</p>
                     <form method="dialog">
                         <textarea name="Situation_explanation" id="situation_text"></textarea>
-                        <div>
-                            <button type="submit" value="OK">Ok</button>
-                            <button type="submit" value="CANCEL">Cancel</button>
+                        <div id="dialog_Btn">
+                            <button type="submit" value="back" class="back_btn">戻る</button>
+                            <button type="submit" value="boost" class="next_btn">ブースト</button>
                         </div>
                     </form>
                 </div>
             </div>
-          </dialog>
+        </dialog>
+
+        <!--設定ダイアログ -->
+        <dialog id="Setting" class="dialog_item" open="">
+            <button id="store_info">店舗情報変更</button>
+            <button id="reservation_info">予約情報変更</button>
+            <button class="back_btn">戻る</button>
+
+        </dialog>
+
+
         
     </main>
     <script src="/js/home.js"></script>

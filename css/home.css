@@ -27,11 +27,13 @@ main {
 }
 
 /* 混雑情報 */
-#congestion_outside {
+#flex_item{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-left: 13vw;
 }
+
 
 /* 混雑情報入力ボタン */
 #congestion {
@@ -62,12 +64,8 @@ main {
 
 /* ブーストボタン */
 #boost-btn button {
-    background-color: #8EAFBC;
-    color: #F9F9F9;
-    border-radius: 45px;
-    font-size: 20px;
-    padding: 10px;
-    height: 60%;
+    margin-left: 5vw;
+    
 }
 
 
@@ -121,14 +119,12 @@ main {
 
 /* ダイアログ */
 #boostDialog{
-    width: 400px;
-    height: 500px;
-    background-color: #ffff;
-    border: #8EAFBC 3px solid;
-    border-radius: 10px;
+    height: 600px;
 }
 
 #dialog_container{
+    width: 70%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -140,7 +136,7 @@ main {
 #dialog_time{
     display: flex;
     margin: auto;
-    width: 70%;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
 }
@@ -155,19 +151,13 @@ main {
 }
 
 #great_text{
-    width: 70%;
+    width: 100%;
     height: 70px;
-    background-color: #BECED5;
-    border: none;
-    border-radius: 10px;
 }
 
 #situation_text{
-    width: 70%;
+    width: 100%;
     height: 150px;
-    background-color: #BECED5;
-    border: none;
-    border-radius: 10px;
 }
 
 /* 時間入力欄 */
@@ -186,3 +176,22 @@ position: absolute;
 width: 65px;
 height: 35px;
 }
+
+/* ブーストボタン */
+#dialog_Btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+
+#dialog_Btn button{
+    width: 80px;
+    height: 45px;
+    font-size: 16px;
+}
+
+.back_btn{
+    background-color: #BC8E8E;
+}
+
+/* 設定ダイアログ */

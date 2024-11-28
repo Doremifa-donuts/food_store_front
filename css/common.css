@@ -22,15 +22,33 @@ header {
 }
 
 button{
+    width: 80px;
+    height: 45px;
+    font-size: 16px;
+    background-color: #8EAFBC;
+    color: #F9F9F9;
     border: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 p{
     margin: 0;
 }
 
-textarea{
+textarea , input{
+    padding: 8px;
     resize: none;
+    background-color: #BECED5;
+    border: none;
+    border-radius: 10px;
+}
+
+dialog{
+    width: 400px;
+    background-color: #ffff;
+    border: #8EAFBC 3px solid;
+    border-radius: 10px;
 }
 
 /* menu icon */
