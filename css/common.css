@@ -8,6 +8,7 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     height: 100vh;
     background-color: #F9F9F9;
@@ -45,7 +46,10 @@ textarea , input{
 }
 
 dialog{
-    width: 400px;
+    position: absolute;
+    top: 13%;
+    width: 350px;
+    padding: 0;
     background-color: #ffff;
     border: #8EAFBC 3px solid;
     border-radius: 10px;
