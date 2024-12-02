@@ -1,5 +1,5 @@
 // ブーストボタン
-const boostBtnBtn = document.getElementById('boostBtn');
+const boostBtnBtn = document.getElementById('boost-btn');
 // ダイアログ
 const boostDialog = document.getElementById('boostDialog');
 // 閉じるボタン
@@ -14,7 +14,7 @@ boostBtn.addEventListener('click', () => {
 });
 
 // モーダルを閉じる
-closeButton?.addEventListener('click', () => {
+closeButton.addEventListener('click', () => {
     boostDialog.close();
     // モーダルを解除すると、スクロール可能になる
     document.documentElement.removeAttribute("style");

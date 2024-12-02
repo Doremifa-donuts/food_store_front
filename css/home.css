@@ -9,70 +9,10 @@ main {
     /* 余白をつける */
 }
 
-
-/* 切り替えボタン */
-#toggle-btn{
-    margin-left: 40px;
-}
-
-#toggle {
-    width: 170px;
-    height: 40px;
-    text-align: center;
-    color: #000000;
-    font-size: 20px; 
-    border: none;
-    border-radius: 10px;
-    border: 2px solid #8EAFBC;
-}
-
-/* 混雑情報 */
-#flex_item{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-left: 13vw;
-}
-
-
-/* 混雑情報入力ボタン */
-#congestion {
-    display: flex;
-    align-items: flex-end;
-}
-
-.congestion_situation{
-    width: 60px;
-    height: 150px;
-    margin: 0 10px;
-    padding: 10px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    background-color: #BECED5;
-    color: #F9F9F9;
-    border-radius: 45px;
-    font-size: 20px;
-}
-
-/* 選択中は大きく */
-.congestion_Big {
-    width: 90px;
-    height: 220px;
-    font-size: 30px;
-    margin: 0 10px;
-}
-
-/* ブーストボタン */
-#boost-btn button {
-    margin-left: 5vw;
-    
-}
-
-
 /* ブースト表示 */
 #boost {
-    position: relative;
-    top: 5vh;
+    position: absolute;
+    top: 13%;
     left: 80%;
     background-color: #8EAFBC;
     display: flex;
@@ -111,15 +51,108 @@ main {
                 -1.5px 0 0 #000000, 1.5px 0 0 #000000;
 }
 
+/* 混雑情報 */
+#flex_item{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 13vw;
+}
+
+
+/* 混雑情報入力ボタン */
+#congestion {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 3vh;
+}
+
+.congestion_situation{
+    width: 55px;
+    height: 130px;
+    margin: 0 10px;
+    padding: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: #BECED5;
+    color: #F9F9F9;
+    border-radius: 45px;
+    font-size: 20px;
+}
+
+
+/* 選択中は大きく */
+.congestion_Big {
+    width: 85px;
+    height: 200px;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+/* ブーストボタン */
+#boost-btn button {
+    margin-left: 5vw;
+}
+
+
+/* 切り替えボタン */
+#toggle-btn{
+    margin-left: 5vw;
+}
+
+#toggle {
+    position: relative;
+    top: -15px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    color: #000000;
+    font-size: 16px; 
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #8EAFBC;
+}
+
+
 /* 予約状況かレビュー */
 #content {
-    height: 65%;
+    position: relative;
+    width: 100vw;
+}
+
+.main_content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+/* 予約状況 */
+#reservation_view{
+    height: 55vh;
+    border: 3px solid #8EAFBC;
+    border-radius: 10px;
+}
+
+#reservation_table{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#reservation_table th{
+    width: 100%;
+    height: calc(100% / 8);
+    
+
 }
 
 
 /* ダイアログ */
-
-
 #dialog_container{
     width: 70%;
     margin: 0 auto;
@@ -128,7 +161,6 @@ main {
 
 .dialog_item{
     margin: 40px 0;
-
 }
 
 #dialog_time{
