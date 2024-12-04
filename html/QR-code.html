@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/QR-code.css">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <a href="/"><img id="header-img" src="/image/title.png" alt="title"></a>
-    <!-- 通知とアイコン -->
-    <div id="header_logo">
-        <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
-        <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
-        <a href=""><img src="/image/account_circle.png" alt="account" class="header_icon"></a>
-    </div>
-</header>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/QR-code.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="/"><img id="header-img" src="/image/title.png" alt="title"></a>
+      <!-- 通知とアイコン -->
+      <div id="header_logo">
+          <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
+          <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
+          <a href=""><img src="/image/account_circle.png" alt="account" class="header_icon"></a>
+      </div>
+    </header>
+
+    <main>
+      <div id="QR_text">
+        <h1>QRコードを読み取ると...</h1>
+        <p>チェックイン！</p>
+      </div>
+
+      <div id="QR_code">
+
+      </div>
+    </main>
+
+    <script src="qr-code.js" charset="utf-8"></script>
+  </body> 
 </html>
