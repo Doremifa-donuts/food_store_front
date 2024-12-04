@@ -1,7 +1,3 @@
-header{
-    justify-content: space-between;
-}
-
 /* main要素 */
 main {
     width: 100%;
@@ -74,20 +70,12 @@ main {
     padding: 10px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    background-color: #BECED5;
     color: #F9F9F9;
     border-radius: 45px;
     font-size: 20px;
 }
 
 
-/* 選択中は大きく */
-.congestion_Big {
-    width: 85px;
-    height: 200px;
-    font-size: 30px;
-    margin: 0 10px;
-}
 
 /* ブーストボタン */
 #boost-btn button {
@@ -266,4 +254,32 @@ height: 35px;
     height: 60px;
     margin-bottom: 40px;
     font-size: 20px;
+}
+
+/* jsで変更されるスタイル */
+.none{
+    background-color: #A7DDA3;
+}
+
+.some{
+ background-color: #EAB685;
+}
+
+.full{
+    background-color: #EA8585;
+}
+
+.congestion_small{
+    background-color: #A0A0A0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+/* 選択中は大きく */
+.congestion_Big {
+    width: 85px;
+    height: 200px;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 10px;
 }

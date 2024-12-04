@@ -10,11 +10,12 @@
 </head>
 
 <body>
+    <!-- template -->
     <header>
-        <a href=""><img id="header-img" src="/image/title.png" alt="title"></a>
+        <a href="/"><img id="header-img" src="/image/title.png" alt="title"></a>
         <!-- 通知とアイコン -->
         <div id="header_logo">
-            <a href=""><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
+            <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
             <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
             <a href=""><img src="/image/account_circle.png" alt="account" class="header_icon"></a>
         </div>
@@ -38,9 +39,9 @@
         <div id="flex_item">
             <!-- 混雑情報選択ボタン -->
             <div id="congestion">
-                <button id="full" class="congestion_situation">来客なし</button>
-                <button id="some" class="congestion_situation congestion_Big">空席あり</button>
-                <button id="none" class="congestion_situation">満席</button>
+                <button id="none" class="none congestion_situation congestion_small">来客なし</button>
+                <button id="some" class="some congestion_situation congestion_Big">空席あり</button>
+                <button id="full" class="full congestion_situation congestion_small">満席</button>
             </div>
         
             <!-- お助けブーストボタン -->
