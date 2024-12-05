@@ -9,3 +9,7 @@
 #QR_text p{
   font-size: 1.8em;
 }
+
+#QR_code_view{
+  text-align: center;
+}
