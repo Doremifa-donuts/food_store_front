@@ -60,9 +60,9 @@
         </div>
 
         <div id="content">
-            <div id="reservation" class="main_content">
+            <!-- <div id="reservation" class="main_content"> -->
                 <!-- 予約状況表示 -->
-                <div id="reservation_view" class="">
+                <!-- <div id="reservation_view" class="">
                     <table id="reservation_table">
                         <tr id="reservation_time">
                             <th class="boder">
@@ -251,11 +251,26 @@
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div> -->
 
             <div id="review" class="main_content">
                 <!-- レビュー表示 -->
-                <div>
+                <div id="review_view">
+                    <div class="review_card">
+                        <div>
+                            <img src="/image/foodImg.jpg" alt="和食の朝食セット：ご飯、味噌汁、焼き鮭、卵焼き、小鉢（ひじきの煮物、ほうれん草のおひたし）、漬物が盛り付けられた和風の食事トレイ">
+                            <div>
+                                <p class="review_text">やはり朝は白ご飯にお味噌汁。<br>
+                                    焼き鮭と白ご飯を食べ、お味噌汁で温まるのが最高です。<br>
+                                    ここのお味噌汁は味がやさしく、具もたくさん入っており大好きです。
+                                </p>
+                                <p class="review_date">2022/10/01</p>
+                                <img src="/image/good.png" alt="グッドボタン">
+                                <span>5</span>
+
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -263,7 +278,7 @@
 
 
         <!-- お助けブーストのダイアログ -->
-        <dialog id="boostDialog" class="dialog">
+        <dialog id="boostDialog" class="dialog" open="">
             <div id="dialog_container">
                 <div id="Free_time" class="dialog_item">
                     <p>空き時間</p>

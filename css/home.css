@@ -22,16 +22,16 @@ main {
 
 .boost_text {
     color: #F4F4F4;
-}
 
-.boost_text p {
-    font-weight: 600;
-}
+    p{
+        font-weight: 600; 
+    }
 
-.boost_text span {
-    float: right;
-    font-weight: 100;
-    font-size: xx-small;
+    span {
+        float: right;
+        font-weight: 100;
+        font-size: xx-small;
+    }
 }
 
 #boost_num {
@@ -130,11 +130,11 @@ main {
     text-align: center;
     table-layout: fixed;
     border-collapse: collapse;
-}
 
-#reservation_table tr{
-    width: 100%;
-    height: calc(100% / 8);
+    tr{
+        width: 100%;
+        height: calc(100% / 8);
+    }
 }
 
 #reservation_time{
@@ -224,10 +224,10 @@ height: 35px;
     display: flex;
     justify-content: space-between;
     margin-top: 15%;
-}
 
-#dialog_Btn button{
-    font-size: 16px;
+    button{
+        font-size: 16px;
+    }
 }
 
 .back_btn{
