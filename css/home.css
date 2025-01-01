@@ -283,3 +283,65 @@ height: 35px;
     font-weight: 500;
     margin: 0 10px;
 }
+
+.review_card{
+    width: 200px;
+    height: 100px;
+    border: 2px solid #8EAFBC;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: start; 
+}
+
+.review_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 40%;
+        height: 80%;
+    }
+
+}
+
+.review_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.review_text{
+    width: 85%;
+
+    p{
+        font-size: 7px;
+    }
+}
+
+.review_info{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+        font-size: 8px;
+    }
+
+    .review_good{
+        display: flex;
+        align-items: center;
+    }
+
+    .good{
+        width: 15px;
+        height: 16px;
+        margin-right: 3px;
+    }
+}
+
+
+
