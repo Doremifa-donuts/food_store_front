@@ -109,6 +109,7 @@ main {
 }
 
 .main_content{
+    overflow: auto;
     position: absolute;
     left: 0;
     right: 0;
