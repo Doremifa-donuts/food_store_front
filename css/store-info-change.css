@@ -6,22 +6,38 @@
 
 #info_Change{
   display: flex;
+  width: 70vw;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
 #info_Change_img{
+  display: flex;
+
   img{
     width: 400px;
     height: 400px;
+  }
+
+  input{
+    width: 250px;
+    height: 25px;
   }
 }
 
 #info_Change_content{
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-around;
+  gap: 20px;
+  width: 60%;
+
+  #description{
+    width: 300px;
+    height: 100px;
+  }
 }
 
 .info_Change_item{
@@ -30,6 +46,41 @@
   gap: 5px;
 
   input{
-    width: 200px;
+    width: 250px;
+    height: 40px;
   }
+}
+
+#store_time{
+
+  #time{
+    width: 250px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+
+    span{
+        margin: 0 10px;
+        font-size: 30px;
+    }
+  }
+
+}
+
+/* 時間入力欄 */
+input[type="time"]{
+  width: 70px;
+  background-color: #ffffff00;
+  font-size: 30px;
+  font-family: 'Zen Maru Gothic';
+  border: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+margin: 0;
+background: none;
+position: absolute;
+width: 65px;
+height: 35px;
 }

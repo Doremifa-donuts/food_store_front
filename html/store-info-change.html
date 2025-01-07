@@ -50,9 +50,11 @@
       <div id="store_time" class="info_Change_item">
         <label for="time">営業時間</label>
         <div id="time">
-          <input type="time" id="Start_time">
-          <p>〜</p>
-          <input type="time" id="End_time">
+          <form action="">
+                <input type="time" name="before">
+                <span>～</span>
+                <input type="time" name="after">
+        </form>
         </div>
       </div>
 
@@ -66,10 +68,8 @@
       <div id="store_description" class="info_Change_item">
         <label for="description">概要</label>
         <textarea name="description" id="description"></textarea>
-
       </div>
-
-    <div>
+    </div>
   </div>
 </main>
   
