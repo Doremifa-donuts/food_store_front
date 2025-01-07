@@ -1,0 +1,35 @@
+#info_Change_title{
+  text-align: center;
+  font-size: 40px;
+  margin: 20px 0px 20px 0px;
+}
+
+#info_Change{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#info_Change_img{
+  img{
+    width: 400px;
+    height: 400px;
+  }
+}
+
+#info_Change_content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info_Change_item{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  input{
+    width: 200px;
+  }
+}
