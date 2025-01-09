@@ -97,3 +97,9 @@ header a {
     margin-right: 2vw;
 }
 
+/* ページタイトル */
+#page_title{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0px;
+  }
