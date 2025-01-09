@@ -1,3 +1,14 @@
+main{
+  height: 70vh;
+}
+
+#reservation_information{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #course_card_view{
   display: flex;
   flex-direction: column;
@@ -53,7 +64,7 @@
 
 /* 概要 */
 .course_discription{
-  overflow: hidden;
+  overflow: auto;
   width: 180px;
   height: 80px;
 }
@@ -61,4 +72,17 @@
 .description{
   display: flex;
   align-items: baseline;
+}
+
+.course_discription::-webkit-scrollbar{
+  display: none;
+}
+
+/* プラスボタン */
+#plus_Btn{
+  margin-top: 10vh;
+  img{
+    padding: auto;
+    width: 28px;
+  }
 }
