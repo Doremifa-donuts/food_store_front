@@ -35,6 +35,10 @@ button{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.back_btn{
+    background-color: #BC8E8E;
+}
+
 p{
     margin: 0;
 }
@@ -55,6 +59,17 @@ dialog{
     background-color: #ffff;
     border: #8EAFBC 3px solid;
     border-radius: 10px;
+}
+
+footer{
+    width: 75vw;
+    margin: 3vh auto 0;
+  
+    #Setting_Btn{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
 }
 
 /* menu icon */
