@@ -82,7 +82,7 @@ main{
 #plus_Btn{
   margin-top: 10vh;
   img{
-    padding: auto;
-    width: 28px;
+    padding-top: 2px;
+    width: 25px;
   }
 }
