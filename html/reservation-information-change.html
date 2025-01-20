@@ -3,65 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- style -->
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/reservation-information-change.css">
-  <title>予約情報変更</title>
+  
+  <title>予約コース変更</title>
 </head>
-<body> 
-  <!-- template -->
-  <header>
-    <a href="/html/home.html"><img id="header-img" src="/image/title.png" alt="title"></a>
-    <!-- 通知とアイコン -->
-    <div id="header_logo">
+  <body> 
+    <!-- template -->
+    <header>
+      <a href="/html/home.html"><img id="header-img" src="/image/title.png" alt="title"></a>
+      <!-- 通知とアイコン -->
+      <div id="header_logo">
         <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
         <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
-        <a href=""><img src="/image/account_circle.png" alt="account" class="header_icon"></a>
-    </div>
-</header>
+        <button id="myPage" class="dialog-open" data-dialog="myPageDialog"><img src="/image/account_circle.png" alt="account" class="header_icon" ></button>
+      </div>
+  </header>
 
-<main>
-  <p id="page_title">予約情報変更</p>
+  <main>
+    <p id="page_title">予約コース変更</p>
 
-  <div id="reservation_information">
-    <div id="course_card_view">
-      <!-- 予約コースカード -->
-      <div class="course_card">
+    <div id="reservation_information">
+      <div id="course_card_view">
+        <!-- 予約コースカード -->
+        <div class="course_card">
 
-        <img src="/image/foodImg.jpg" alt="">
+          <img src="/image/foodImg.jpg" alt="">
 
-        <div id="course_info">
-          <div class="info_item">
-            <label for="Name">コース名</label>
-            <input type="text" name="Name" class="course_name" value="かれんこん" readonly style="width: 180px;">
+          <div id="course_info">
+            <div class="info_item">
+              <label for="Name">コース名</label>
+              <input type="text" name="Name" class="course_name" value="かれんこん" readonly style="width: 180px;">
+            </div>
+
+            <div class="info_item Fee">
+              <label for="Fee">料金</label>
+              <input type="text" name="Fee" class="course_fee" value="￥5,000" readonly style="width: 180px;">
+            </div>
+
+            <div class="info_item description ">
+              <label for="description">概要</label>
+              <textarea name="description" class="course_discription" readonly>忘年会・新年会など各種宴会に◎
+  シメの雑炊までついた豪華6品を楽しめる飲み放題付きコースです★
+  コース品数:6品/利用人数:2名～予約締切:来店日の前日21時まで
+              </textarea>
+            </div>
           </div>
 
-          <div class="info_item Fee">
-            <label for="Fee">料金</label>
-            <input type="text" name="Fee" class="course_fee" value="￥5,000" readonly style="width: 180px;">
-          </div>
-
-          <div class="info_item description ">
-            <label for="description">概要</label>
-            <textarea name="description" class="course_discription" readonly>忘年会・新年会など各種宴会に◎
-シメの雑炊までついた豪華6品を楽しめる飲み放題付きコースです★
-コース品数:6品/利用人数:2名～予約締切:来店日の前日21時まで
-            </textarea>
-          </div>
         </div>
 
       </div>
+      <button id="plus_Btn"><img src="/image/plus.png" alt="プラスボタン"></button>
 
     </div>
-    <button id="plus_Btn"><img src="/image/plus.png" alt="プラスボタン"></button>
 
-  </div>
-</main>
+    <!--マイページダイアログ -->
+    <dialog id="myPageDialog" class="dialog">
+      <div id="setting_item">
+          <div id="setting_content">
+              <div><a href="/html/store-info-change.html"><button id="store_info">店舗情報変更</button></a></div>
+              <div><a href="/html/reservation-information-change.html"><button id="reservation_info">予約情報変更</button></a></div>
+          </div>
+          <button class="back_btn">戻る</button>
+      </div>
+    </dialog>
 
-<footer>
-  <div id="Setting_Btn">
-    <button type="submit" value="back" class="back_btn" >戻る</button>
-    <button type="submit" value="boost" class="next_btn">変更</button>
-  </div>
-</footer>
-</body>
+  </main>
+
+  <footer>
+    <div id="Setting_Btn">
+      <a href="/html/home.html"><button type="submit" value="back" class="back_btn" >戻る</button></a>
+      <a href="/html/home.html"><button type="submit" value="boost" class="next_btn">変更</button></a>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="/js/" charset="utf-8"></script>
+  <script src="/js/common.js" charset="utf-8"></script>
+
+  </body>
 </html>

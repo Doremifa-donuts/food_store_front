@@ -12,9 +12,9 @@
       <a href="/html/home.html"><img id="header-img" src="/image/title.png" alt="title"></a>
       <!-- 通知とアイコン -->
       <div id="header_logo">
-          <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
-          <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
-          <a href=""><img src="/image/account_circle.png" alt="account" class="header_icon"></a>
+        <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
+        <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
+        <button id="myPage" class="dialog-open" data-dialog="myPageDialog"><img src="/image/account_circle.png" alt="account" class="header_icon" ></button>
       </div>
     </header>
 
@@ -27,8 +27,22 @@
       <div id="QR_code_view">
         <img src="/image/QR_mattuu.png" alt="">
       </div>
+
+      <!--マイページダイアログ -->
+      <dialog id="myPageDialog" class="dialog">
+        <div id="setting_item">
+            <div id="setting_content">
+                <div><a href="/html/store-info-change.html"><button id="store_info">店舗情報変更</button></a></div>
+                <div><a href="/html/reservation-information-change.html"><button id="reservation_info">予約情報変更</button></a></div>
+            </div>
+            <button class="back_btn">戻る</button>
+        </div>
+      </dialog>
+
     </main>
 
-    <script src="qr-code.js" charset="utf-8"></script>
+    <!-- script -->
+    <script src="/js/" charset="utf-8"></script>
+    <script src="/js/common.js" charset="utf-8"></script>
   </body> 
 </html>

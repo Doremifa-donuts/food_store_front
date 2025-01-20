@@ -52,7 +52,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-left: 13vw;
+    margin-left: 10vw;
 }
 
 
@@ -78,8 +78,13 @@ main {
 
 
 /* ブーストボタン */
-#boost-btn button {
+#boost-btn {
     margin-left: 5vw;
+}
+
+#myPage{
+    background-color: transparent;
+    box-shadow: none;
 }
 
 
@@ -182,30 +187,6 @@ height: 35px;
     button{
         font-size: 16px;
     }
-}
-
-
-
-/* 設定ダイアログ */
-#Setting{
-    width: 300px;
-    top: 25%;
-    text-align: center;
-}
-
-#setting_item{
-    margin: 50px;
-}
-
-#setting_content{
-    margin-bottom: 10%;
-}
-
-#setting_content button{
-    width: 150px;
-    height: 60px;
-    margin-bottom: 40px;
-    font-size: 20px;
 }
 
 /* jsで変更されるスタイル */
