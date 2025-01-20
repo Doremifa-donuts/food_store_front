@@ -59,7 +59,19 @@ dialog{
     background-color: #ffff;
     border: #8EAFBC 3px solid;
     border-radius: 10px;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+        transition:  .3s ease-in-out;
+      }
+      &.show {
+        opacity: 1;
+        &::backdrop {
+            background-color: rgba(0, 0, 0, 0.551);
+        }
+    }
 }
+
 
 footer{
     width: 75vw;

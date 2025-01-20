@@ -41,9 +41,11 @@
         <div id="flex_item">
             <!-- 混雑情報選択ボタン -->
             <div id="congestion">
-                <button id="none" class="none congestion_situation congestion_small">来客なし</button>
-                <button id="some" class="some congestion_situation congestion_Big">空席あり</button>
-                <button id="full" class="full congestion_situation congestion_small">満席</button>
+                <form action="put">
+                    <button id="none" class="none congestion_situation congestion_small">来客なし</button>
+                    <button id="some" class="some congestion_situation congestion_Big">空席あり</button>
+                    <button id="full" class="full congestion_situation congestion_small">満席</button>
+                </form>
             </div>
         
             <!-- お助けブーストボタン -->
@@ -54,16 +56,16 @@
 
         <!-- 表示切り替えボタン -->
         <div id="toggle-btn">
-            <select name="toggle" id="toggle">
+            <select name="toggle" id="switching_toggle">
                 <option value="0">予約状況</option>
                 <option value="1">レビュー</option>
             </select>
         </div>
 
         <div id="content">
-            <!-- <div id="reservation" class="main_content"> -->
+            <div id="reservation" class="main_content">
                 <!-- 予約状況表示 -->
-                <!-- <div id="reservation_view" class="">
+                <div id="reservation_view" class="">
                     <table id="reservation_table">
                         <tr id="reservation_time">
                             <th class="boder">
@@ -252,7 +254,7 @@
                         </tr>
                     </table>
                 </div>
-            </div> -->
+            </div>
 
             <div id="review" class="main_content">
                 <!-- レビュー表示 -->

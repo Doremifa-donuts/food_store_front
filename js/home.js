@@ -1,34 +1,21 @@
-const dialogs = document.querySelectorAll('.dialog'); //ダイアログ取得
-const open = document.querySelectorAll('.dialog-open'); //ダイアログを開くボタン
+//toggleの選択状況によって表示を変える処理
+const switching_toggle = document.getElementById('switching_toggle'); //select取得
+const reservation = document.getElementById('reservation') //予約表
+const review = document.getElementById('review') //レビュー表
 
+// 切り替えるたび
+switching_toggle.addEventListener('change', () => {
+    console.log(switching_toggle.value); //取得した値確認（消していい）
 
-// ダイアログを開く
-open.forEach((button) => {
-  button.addEventListener('click', () => {
-    const dialogId = button.getAttribute('data-dialog');    //どっちのダイアログを開くか
-    const dialog = document.getElementById(dialogId);
-    dialog.showModal();
-    dialog.classList.add('show');
-  });
+    const selectValue = switching_toggle.value;  //optionのvalue取得
+
+    if(selectValue == 0){
+        //0で予約表表示
+        reservation.style.display = 'block';
+        review.style.display = 'none';
+    }else{
+        review.style.display= 'block'
+        reservation.style.display = 'none';
+    }
 });
 
-// ダイアログを閉じる
-const close = document.querySelectorAll('.back_btn');
-close.forEach(button => {
-  button.addEventListener('click', () => {
-  const dialog = button.closest('dialog');
-  dialog.classList.remove('show');
-  setTimeout(() => dialog.close(), 500);
-  });
-});
-
-// オーバーレイクリックでダイアログを閉じる
-dialogs.forEach(button => {
-    button.addEventListener('click', (event) => {
-      if(event.target.closest('.dialog-inner') === null) {
-        const dialog = button.closest('dialog');
-        dialog.classList.remove('show');
-        setTimeout(() => dialog.close(), 500);
-      }
-    });
-  });
