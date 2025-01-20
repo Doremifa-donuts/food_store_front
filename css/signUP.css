@@ -1,6 +1,5 @@
 main{
   height: 75vh;
-  text-align: center;
 }
 
 #SignUp{
@@ -19,11 +18,12 @@ main{
 .SignupItem{
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
-  gap: 15px;
+  margin: 30px 0;
 
   input{
     padding: 10px;
+    width: 300px;
+    height: 30px;
   }
 }
 

@@ -1,6 +1,10 @@
+main{
+  height: 75vh;
+}
+
 #info_Change{
   display: flex;
-  width: 70vw;
+  width: 75vw;
   margin:  5vh auto 0; 
   justify-content: center;
   gap: 20px;
