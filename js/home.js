@@ -11,11 +11,12 @@ switching_toggle.addEventListener('change', () => {
 
     if(selectValue == 0){
         //0で予約表表示
-        reservation.style.display = 'block';
-        review.style.display = 'none';
+        reservation.style.display = 'block';    //予約表を見えるように
+        review.style.display = 'none';  //レビューを見えないように
     }else{
-        review.style.display= 'block';
-        reservation.style.display = 'none';
+        review.style.display= 'block';  //レビューを見えるように
+        reservation.style.display = 'none'; //予約表を見えないように
+        
     }
 });
 
