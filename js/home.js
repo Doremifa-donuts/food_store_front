@@ -1,7 +1,7 @@
 //toggleの選択状況によって表示を変える処理
 const switching_toggle = document.getElementById('switching_toggle'); //select取得
-const reservation = document.getElementById('reservation') //予約表
-const review = document.getElementById('review') //レビュー表
+const reservation = document.getElementById('reservation'); //予約表
+const review = document.getElementById('review'); //レビュー表
 
 // 切り替えるたび
 switching_toggle.addEventListener('change', () => {
@@ -14,8 +14,20 @@ switching_toggle.addEventListener('change', () => {
         reservation.style.display = 'block';
         review.style.display = 'none';
     }else{
-        review.style.display= 'block'
+        review.style.display= 'block';
         reservation.style.display = 'none';
     }
+});
+
+// 混雑状況ボタン、押したら大きくなる処理
+const congestion_situation = document.querySelectorAll('.congestion_situation');
+
+console.log(congestion_situation);
+
+congestion_situation.forEach(button => {
+    button.addEventListener("click", (e) => {
+        const id_value = button.id;
+        console.log(id_value);
+    });
 });
 

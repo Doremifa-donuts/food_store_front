@@ -41,11 +41,9 @@
         <div id="flex_item">
             <!-- 混雑情報選択ボタン -->
             <div id="congestion">
-                <form action="put">
                     <button id="none" class="none congestion_situation congestion_small">来客なし</button>
                     <button id="some" class="some congestion_situation congestion_Big">空席あり</button>
                     <button id="full" class="full congestion_situation congestion_small">満席</button>
-                </form>
             </div>
         
             <!-- お助けブーストボタン -->
@@ -753,31 +751,28 @@
             <div id="dialog_container">
                 <div id="Free_time" class="dialog_item">
                     <p>空き時間</p>
-                        <form action="">
                             <div id="dialog_time">
                                 <input type="time" name="before">
                                 <span>～</span>
                                 <input type="time" name="after">
                             </div>
-                        </form>
+
                 </div>
 
                 <div id="Great_value" class="dialog_item">
                     <p>お得情報</p>
-                    <form action="">
                         <textarea name="Great_value" id="great_text"></textarea>
-                    </form>
                 </div>
 
                 <div id="Situation" class="dialog_item">
                     <p>状況説明</p>
-                    <form method="dialog">
                         <textarea name="Situation_explanation" id="situation_text"></textarea>
+   
                         <div id="dialog_Btn">
                             <button type="submit" value="back" class="back_btn" >戻る</button>
                             <button type="submit" value="boost" class="next_btn">ブースト</button>
                         </div>
-                    </form>
+                    
                 </div>
             </div>
         </dialog>
