@@ -108,7 +108,7 @@ main {
 }
 
 
-/* 予約状況かレビュー */
+/* 予約状況,レビュー */
 #content {
     position: relative;
     width: 100vw;
@@ -207,11 +207,6 @@ height: 35px;
     background-color: #A0A0A0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
 }
-
-#review{
-    display: none;
-}
-
 
 /* 選択中は大きく */
 .congestion_Big {

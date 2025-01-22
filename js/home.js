@@ -2,11 +2,20 @@
 const switching_toggle = document.getElementById('switching_toggle'); //select取得
 const reservation = document.getElementById('reservation'); //予約表
 const review = document.getElementById('review'); //レビュー表
+const selectValue = switching_toggle.value;  //optionのvalue取得
+
+// 初期画面などで
+if(selectValue == 0){
+    //0で予約表表示
+    reservation.style.display = 'block';    //予約表を見えるように
+    review.style.display = 'none';  //レビューを見えないように
+}else{
+    review.style.display= 'block';  //レビューを見えるように
+    reservation.style.display = 'none'; //予約表を見えないように
+}
 
 // 切り替えるたび
 switching_toggle.addEventListener('change', () => {
-    console.log(switching_toggle.value); //取得した値確認（消していい）
-
     const selectValue = switching_toggle.value;  //optionのvalue取得
 
     if(selectValue == 0){
@@ -45,4 +54,24 @@ congestion_situation.forEach(button => {
         }
     });
 });
+
+//　レビュー複製処理
+const review_card = document.getElementById('review_card'); //レビューカード（複製されるもの）
+const review_btn = document.getElementById('review_btn'); //仮で作ったカード複製ボタン
+const review_view = document.getElementById('review_view'); //レビューが表示される場所（複製する場所）
+let review_count = 1;   //複製されるid名の変更部分
+
+//レビューカードが複製される処理
+review_btn.addEventListener("click",(e) => {
+    const clone_element = review_card.cloneNode(true);  //子要素も含めて複製
+    review_view.appendChild(clone_element);   //現在表示されているものの後に追加
+    review_card.style.display = "flex"
+    clone_element.id = 'review_card' + review_count;    //複製されたレビューカードのid名変更3x
+
+    review_count++; //複製されたid名の数字を変更する変更する
+});
+
+
+
+
 
