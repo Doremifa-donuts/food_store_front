@@ -11,20 +11,27 @@
     <title>Home</title>
 </head>
 
-<body>
+<body class="move">
+    <div class="animation-bg"></div>
     <!-- template -->
     <header>
-        <a href="/html/home.html"><img id="header-img" src="/image/title.png" alt="title"></a>
+        <a href="/html/home.html"><img id="header-img" src="/image/title.png" alt="title"></a>  <!--タイトル-->
         <!-- 通知とアイコン -->
         <div id="header_logo">
-            <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
-            <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
-            <button id="myPage" class="dialog-open" data-dialog="myPageDialog"><img src="/image/account_circle.png" alt="account" class="header_icon" ></button>
+            <button class="menu_icon">
+                <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>   <!--QRコード画面表示アイコン-->
+            </button>
+            <button class="menu_icon">
+                <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>  <!--通知画面-->
+            </button>
+            <button class="dialog-open menu_icon" data-dialog="myPageDialog"> <!--マイページダイアログ表示-->
+                <img src="/image/account_circle.png" alt="account" class="header_icon" >
+            </button>
         </div>
     </header>
 
     <main>
-        <!-- お助けブースト表示 -->
+        <!-- お助けブースト表示ボタン -->
         <div id="boost">
             <div class="boost_text">
                 <p>お助けブースト</p>
@@ -37,7 +44,7 @@
         </div>
 
 
-        <!-- お店側の入力欄 -->
+        <!-- 混雑状況 -->
         <div id="flex_item">
             <!-- 混雑情報選択ボタン -->
             <div id="congestion">
@@ -58,11 +65,11 @@
                 <option value="0">予約状況</option>
                 <option value="1" selected>レビュー</option>
             </select>
-        <button id="review_btn">+</button>
+            <button id="review_btn">+</button>  
 
         </div>
 
-
+        <!-- 中身が切り替わる。予約状況 or レビュー -->
         <div id="content">
             <div id="reservation" class="main_content">
                 <!-- 予約状況表示 -->
@@ -257,6 +264,7 @@
                 </div>
             </div>
 
+            <!-- レビュー -->
             <div id="review" class="main_content">
                 <!-- レビュー表示 -->
                 <div id="review_view">

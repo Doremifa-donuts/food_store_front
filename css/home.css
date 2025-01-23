@@ -62,6 +62,10 @@ main {
     display: flex;
     align-items: flex-end;
     margin-top: 3vh;
+
+    &:active{
+        
+    }
 }
 
 .congestion_situation{
@@ -77,15 +81,9 @@ main {
 }
 
 
-
 /* ブーストボタン */
 #boost-btn {
     margin-left: 5vw;
-}
-
-#myPage{
-    background-color: transparent;
-    box-shadow: none;
 }
 
 

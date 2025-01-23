@@ -1,6 +1,6 @@
+//ダイアログ表示処理
 const dialogs = document.querySelectorAll('.dialog'); //ダイアログ取得
 const open = document.querySelectorAll('.dialog-open'); //ダイアログを開くボタン
-
 
 // ダイアログを開く
 open.forEach((button) => {

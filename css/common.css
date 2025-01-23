@@ -33,6 +33,14 @@ button{
     border: none;
     border-radius: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &:active {
+        transform: translate(0em, 0.15em);
+        &::before {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
+            transform: translate3d(0, 0, -1em);
+        }
+    }
 }
 
 /* 戻る・閉じるボタン */
@@ -118,8 +126,8 @@ header a {
 
 /* mypage dialog */
 
-/* mypage button */
-#myPage{
+/* メニューアイコンのボタンstyle設定 */
+.menu_icon{
     width: fit-content;
     height: fit-content;
     background-color: transparent;
@@ -145,3 +153,4 @@ header a {
     margin-bottom: 40px;
     font-size: 20px;
 }
+

@@ -55,6 +55,7 @@ congestion_situation.forEach(button => {
     });
 });
 
+
 //　レビュー複製処理
 const review_card = document.getElementById('review_card'); //レビューカード（複製されるもの）
 const review_btn = document.getElementById('review_btn'); //仮で作ったカード複製ボタン(動きを確認するための仮置き)
@@ -65,12 +66,18 @@ let review_count = 1;   //複製されるid名の変更部分
 review_btn.addEventListener("click",(e) => {
     const clone_element = review_card.cloneNode(true);  //子要素も含めて複製
     review_view.appendChild(clone_element);   //現在表示されているものの後に追加
-    review_card.style.display = "flex"
+    review_card.style.display = "flex"; //見えなくしているものを複製しているので見えるように
     clone_element.id = 'review_card' + review_count;    //複製されたレビューカードのid名変更3x
 
     review_count++; //複製されたid名の数字を変更する変更する
 });
 
+
+//お助けブースト周辺人数が変更される処理
+const boost_num = document.getElementById('boost_num');     //周辺人数が表示されている部分
+let boost_people = 7;   //周辺人数 
+
+boost_num.innerText = boost_people;     //表示される人数の変更
 
 
 

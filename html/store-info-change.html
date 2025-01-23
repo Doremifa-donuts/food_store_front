@@ -13,10 +13,16 @@
       <a href="/html/home.html"><img id="header-img" src="/image/title.png" alt="title"></a>
       <!-- 通知とアイコン -->
       <div id="header_logo">
-        <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>
-        <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>
-        <button id="myPage" class="dialog-open" data-dialog="myPageDialog"><img src="/image/account_circle.png" alt="account" class="header_icon" ></button>
-      </div>
+        <button class="menu_icon">
+            <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>   <!--QRコード画面表示アイコン-->
+        </button>
+        <button class="menu_icon">
+            <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>  <!--通知画面-->
+        </button>
+        <button class="dialog-open menu_icon" data-dialog="myPageDialog"> <!--マイページダイアログ表示-->
+            <img src="/image/account_circle.png" alt="account" class="header_icon" >
+        </button>
+    </div>
     </header>
 
     <main>
