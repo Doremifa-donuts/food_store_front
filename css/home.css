@@ -62,10 +62,6 @@ main {
     display: flex;
     align-items: flex-end;
     margin-top: 3vh;
-
-    &:active{
-        
-    }
 }
 
 .congestion_situation{
@@ -78,6 +74,10 @@ main {
     color: #F9F9F9;
     border-radius: 45px;
     font-size: 20px;
+
+    &:active{
+        transform: none;
+    }
 }
 
 
@@ -207,7 +207,7 @@ height: 35px;
 }
 
 /* 選択中は大きく */
-.congestion_Big {
+.congestion_Big{
     width: 85px;
     height: 200px;
     font-size: 30px;
