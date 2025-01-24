@@ -16,25 +16,24 @@
     </header>
     <main>
 
-        <form id="login-form">
-            <!-- 店舗番号 -->
-            <div id="login_Snum">
-                <label for="store-number">店舗番号</label>
-                <input type="text" id="store-number" name="store-number" required>
-            </div>
+        <div id="login-form">
+            <form>
+                <!-- 店舗番号 -->
+                <div id="login_Snum" class="login_item">
+                    <label for="store-number">店舗番号</label>
+                    <input type="text" id="store_number" name="store-number" required>
+                </div>
+                <!-- パスワード -->
+                <div id="login_pass" class="login_item">
+                    <label for="password">パスワード</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </form>
+                <button class="select-btn" id="login-btn">ログイン</button>
+        </div>
 
-            <!-- パスワード -->
-            <div id="login_pass">
-                <label for="password">パスワード</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <button class="select-btn" id="login-btn">ログイン</button>
-
-        </form>
-
+        
         <a href="/html/sign-UP.html"><button class="select-btn">新規登録</button></a>
-
         
     </main>
 
