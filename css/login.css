@@ -6,13 +6,16 @@ main {
     align-items: center;
 }
 
-form{
+#login-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 35px;
-    margin: 10vh 0;
+    margin: 5vh 0;
+}
+
+.login_item{
+    margin-bottom: 50px;
 }
 
 label{
