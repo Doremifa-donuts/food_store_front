@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { LOGIN_URL } from "./variable.js";
 
 // ログインボタン
 const loginBtn = document.getElementById('login-btn');
@@ -7,18 +7,28 @@ const loginBtn = document.getElementById('login-btn');
 loginBtn.addEventListener('click', () => {
     const store_number = document.getElementById('store_number').value; //店舗番号
     const password = document.getElementById('password').value; //パスワード
-    console.log(store_number,password);
 
     //ログイン処理
-    axios.post(`${API_URL}/login`, {
-        "MailAddress": store_number,
-        "Password": password
-    }).then((res) => {
-        // ログイン成功
-        console.log(res);
-    }).catch((err) => {
-        // ログイン失敗
-        console.log(err);
+    fetch(LOGIN_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            MailAddress: store_number,
+            password: password
+        }),
     })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('ログインに失敗しました');
+        }
+        return response.json();
+    }).then(data => {   //ログイン成功時
+        console.log('ログイン成功:', data);
+        window.location.href = '/html/home.html';
+    }).catch(error => {
+        console.error('ログインエラー:', error);
+    });
 });
 
