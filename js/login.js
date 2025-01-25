@@ -1,11 +1,7 @@
-import dotenv from 'dotenv';
 import axios from 'axios';
 
 // ログインボタン
 const loginBtn = document.getElementById('login-btn');
-
-//環境変数読み込み
-require('dotenv').config();
 
 // ログインボタンを押された時に入力情報取得
 loginBtn.addEventListener('click', () => {
@@ -14,6 +10,15 @@ loginBtn.addEventListener('click', () => {
     console.log(store_number,password);
 
     //ログイン処理
-
+    axios.post(`${API_URL}/login`, {
+        "MailAddress": store_number,
+        "Password": password
+    }).then((res) => {
+        // ログイン成功
+        console.log(res);
+    }).catch((err) => {
+        // ログイン失敗
+        console.log(err);
+    })
 });
 
