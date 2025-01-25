@@ -25,7 +25,7 @@ switching_toggle.addEventListener('change', () => {
     }else{
         review.style.display= 'block';  //レビューを見えるように
         reservation.style.display = 'none'; //予約表を見えないように
-        
+
     }
 });
 

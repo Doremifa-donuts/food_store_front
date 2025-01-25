@@ -6,4 +6,8 @@ loginBtn.addEventListener('click', () => {
     const store_number = document.getElementById('store_number').value; //店舗番号
     const password = document.getElementById('password').value; //パスワード
     console.log(store_number,password);
+
+    //ログイン処理
+    fetch()
 });
+
