@@ -16,8 +16,9 @@ loginBtn.addEventListener('click', () => {
         },
         body: JSON.stringify({
             MailAddress: store_number,
-            password: password
+            Password: password
         }),
+        mode: 'cors',
     })
     .then(response => {
         if (!response.ok) {
