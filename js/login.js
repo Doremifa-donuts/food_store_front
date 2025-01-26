@@ -5,9 +5,9 @@ const loginBtn = document.getElementById('login-btn');
 
 // ログインボタンを押された時に入力情報取得
 loginBtn.addEventListener('click', () => {
-    const store_number = document.getElementById('store_number').value; //店舗番号
+    const store_mail = document.getElementById('store_mail').value; //店舗番号
     const password = document.getElementById('password').value; //パスワード
-
+  
     //ログイン処理
     fetch(LOGIN_URL, {
         method: 'POST',
@@ -32,4 +32,3 @@ loginBtn.addEventListener('click', () => {
         console.error('ログインエラー:', error);
     });
 });
-
