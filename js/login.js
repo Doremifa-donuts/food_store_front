@@ -7,7 +7,7 @@ const loginBtn = document.getElementById('login-btn');
 loginBtn.addEventListener('click', () => {
     const store_mail = document.getElementById('store_mail').value; //店舗番号
     const password = document.getElementById('password').value; //パスワード
-  
+
     //ログイン処理
     fetch(LOGIN_URL, {
         method: 'POST',
@@ -15,7 +15,7 @@ loginBtn.addEventListener('click', () => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            MailAddress: store_number,
+            MailAddress: store_mail,
             Password: password
         }),
         mode: 'cors',
