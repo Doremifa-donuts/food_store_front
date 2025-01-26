@@ -1,3 +1,5 @@
+import { LOGIN_URL } from "./variable.js";
+
 // ログインボタン
 const loginBtn = document.getElementById('login-btn');
 
@@ -5,5 +7,28 @@ const loginBtn = document.getElementById('login-btn');
 loginBtn.addEventListener('click', () => {
     const store_mail = document.getElementById('store_mail').value; //店舗番号
     const password = document.getElementById('password').value; //パスワード
-    console.log(store_mail,password);
+  
+    //ログイン処理
+    fetch(LOGIN_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            MailAddress: store_number,
+            Password: password
+        }),
+        mode: 'cors',
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('ログインに失敗しました');
+        }
+        return response.json();
+    }).then(data => {   //ログイン成功時
+        console.log('ログイン成功:', data);
+        window.location.href = '/html/home.html';
+    }).catch(error => {
+        console.error('ログインエラー:', error);
+    });
 });
