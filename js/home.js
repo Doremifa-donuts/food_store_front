@@ -4,6 +4,8 @@ const reservation = document.getElementById('reservation'); //予約表
 const review = document.getElementById('review'); //レビュー表
 const selectValue = switching_toggle.value;  //optionのvalue取得
 
+console.log(localStorage.getItem('JtiToken'));
+
 // 初期画面などで
 if(selectValue == 0){
     //0で予約表表示
@@ -75,7 +77,7 @@ review_btn.addEventListener("click",(e) => {
 
 //お助けブースト周辺人数が変更される処理
 const boost_num = document.getElementById('boost_num');     //周辺人数が表示されている部分
-let boost_people = 7;   //周辺人数 
+let boost_people = 7;   //周辺人数
 
 boost_num.innerText = boost_people;     //表示される人数の変更
 
