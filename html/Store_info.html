@@ -42,9 +42,9 @@
           <label for="time">営業時間</label>
           <div id="time">
             <form action="">
-                  <input type="time" list="date-list" name="open">
+                  <input type="time" list="date-list" name="open" id="open_time">
                   <span>～</span>
-                  <input type="time" list="date-list" name="close">
+                  <input type="time" list="date-list" name="close" id="close_time">
           </form>
           </div>
         </div>
@@ -69,9 +69,9 @@
   <footer>
     <div id="Setting_Btn">
       <a href="/html/sign-UP.html"><button type="submit" value="back" class="back_btn" >戻る</button></a>
-      <a href="/html/reservation-info.html"><button type="submit" value="boost" class="next_btn">次へ</button></a>
+      <button type="submit" value="boost" class="next_btn" id="store_next">次へ</button>
     </div>
   </footer>
-  
+  <script src="/js/signup_info.js"></script>
 </body>
 </html>
