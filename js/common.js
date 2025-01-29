@@ -17,7 +17,7 @@ const close = document.querySelectorAll('.back_btn');
 close.forEach(button => {
   button.addEventListener('click', () => {
   const dialog = button.closest('dialog');
-  dialog.classList.remove('show');
+  dialog.classList.remove('show');  //ダイアログ表示
   setTimeout(() => dialog.close(), 500);
   });
 });
@@ -25,10 +25,7 @@ close.forEach(button => {
 // オーバーレイクリックでダイアログを閉じる
 dialogs.forEach(button => {
     button.addEventListener('click', (event) => {
-      if(event.target.closest('.dialog-inner') === null) {
-        const dialog = button.closest('dialog');
-        dialog.classList.remove('show');
-        setTimeout(() => dialog.close(), 500);
-      }
+        dialog.classList.remove('show');  //ダイアログ閉じる
+      
     });
   });
