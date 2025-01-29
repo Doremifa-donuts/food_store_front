@@ -1,10 +1,42 @@
+import * as variable from "./variable.js";
+
 //toggleの選択状況によって表示を変える処理
-const switching_toggle = document.getElementById('switching_toggle'); //select取得
+const switchingToggle = document.getElementById('switching_toggle'); //select取得
 const reservation = document.getElementById('reservation'); //予約表
 const review = document.getElementById('review'); //レビュー表
-const selectValue = switching_toggle.value;  //optionのvalue取得
+const selectValue = switchingToggle.value;  //optionのvalue取得
+const jtiToken = localStorage.getItem('JtiToken');
 
-console.log(localStorage.getItem('JtiToken'));
+//予約状況を取得
+fetch(variable.RESERVATION_URL, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${jtiToken}`
+    },
+    mode: 'cors',
+})
+.then(response => {
+    switch (response.status) {
+        case 200:
+            return response.json();
+        case 401:   //認証情報が正しくなければログイン画面に遷移
+            localStorage.removeItem('JtiToken');
+            window.location.href = './login.html';
+        case 404:
+            break;
+    }
+})
+.then(data => {
+    console.log(data);
+    const response = Object.values(data.Response.Data);
+    //予約情報を表示する処理
+    response.forEach(item => {
+        console.log(item.UserName);
+    })
+}).catch(error => {
+    //エラー処理
+})
 
 // 初期画面などで
 if(selectValue == 0){
@@ -17,8 +49,8 @@ if(selectValue == 0){
 }
 
 // 切り替えるたび
-switching_toggle.addEventListener('change', () => {
-    const selectValue = switching_toggle.value;  //optionのvalue取得
+switchingToggle.addEventListener('change', () => {
+    const selectValue = switchingToggle.value;  //optionのvalue取得
 
     if(selectValue == 0){
         //0で予約表表示
@@ -38,7 +70,7 @@ const congestion_situation = document.querySelectorAll('.congestion_situation');
 congestion_situation.forEach(button => {
     button.addEventListener("click", (e) => {
         const id_value = button.id; //どの状況が選択されているかID名で取得
-      
+
         //現在大きく表示されているものがあれば小さくする
         if(document.querySelector('.congestion_Big')){
             big_value = document.querySelector('.congestion_Big'); //現在大きく表示されているもの
@@ -80,7 +112,3 @@ const boost_num = document.getElementById('boost_num');     //周辺人数が表
 let boost_people = 7;   //周辺人数
 
 boost_num.innerText = boost_people;     //表示される人数の変更
-
-
-
-
