@@ -20,20 +20,22 @@
       
       <div id="SignUp_content">
         <!-- メールアドレス -->
-        <div class="SignupItem">
-          <label for="mail">メールアドレス</label>
-          <input type="text" id="mail">
-        </div>
-        <!-- 電話番号 -->
-        <div class="SignupItem">
-          <label for="tel">電話番号</label>
-          <input type="tel" id="mail">
-        </div>
-        <!-- パスワード -->
-        <div class="SignupItem">
-          <label for="pass">パスワード</label>
-          <input type="password" id="pass">
-        </div>
+        <foem>
+          <div class="SignupItem">
+            <label for="mail">メールアドレス</label>
+            <input type="text" id="mail">
+          </div>
+          <!-- 電話番号 -->
+          <div class="SignupItem">
+            <label for="tel">電話番号</label>
+            <input type="tel" id="tel">
+          </div>
+          <!-- パスワード -->
+          <div class="SignupItem">
+            <label for="pass">パスワード</label>
+            <input type="password" id="pass">
+          </div>
+        </foem>
       </div>
     </div>
 
@@ -42,9 +44,9 @@
   <footer>
     <div id="Setting_Btn">
       <a href="/html/login.html"><button type="submit" value="back" class="back_btn" >戻る</button></a>
-      <a href="/html/store_info.html"><button type="submit" value="boost" class="next_btn">次へ</button></a>
+      <button type="submit" value="boost" class="next_btn" id="signup_next">次へ</button>
     </div>
   </footer>
-
+  <script src="/js/signup_info.js"></script>
 </body>
 </html>

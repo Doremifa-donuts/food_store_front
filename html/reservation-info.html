@@ -20,22 +20,22 @@
         <!-- 予約コースカード -->
         <div class="course_card">
   
-          <img src="/image/foodImg.jpg" alt="">
+          <img src="/image/foodImg.jpg" alt="" id="reservation_img">
   
           <div id="course_info">
             <div class="info_item">
               <label for="Name">コース名</label>
-              <input type="text" name="Name" class="course_name" value="かれんこん" readonly style="width: 180px;">
+              <input type="text" name="Name"  id="course_name" value="かれんこん" readonly style="width: 180px;">
             </div>
   
             <div class="info_item Fee">
               <label for="Fee">料金</label>
-              <input type="text" name="Fee" class="course_fee" value="￥5,000" readonly style="width: 180px;">
+              <input type="text" name="Fee" id="course_fee" value="￥5,000" readonly style="width: 180px;">
             </div>
   
             <div class="info_item description ">
               <label for="description">概要</label>
-              <textarea name="description" class="course_discription" readonly>忘年会・新年会など各種宴会に◎
+              <textarea name="description" id="course_discription" readonly>忘年会・新年会など各種宴会に◎
   シメの雑炊までついた豪華6品を楽しめる飲み放題付きコースです★
   コース品数:6品/利用人数:2名～予約締切:来店日の前日21時まで
               </textarea>
@@ -53,7 +53,7 @@
   <footer>
     <div id="Setting_Btn">
       <a href="/html/store_info.html"><button type="submit" value="back" class="back_btn" >戻る</button></a>
-      <a href="/html/home.html"><button type="submit" value="boost" class="next_btn">次へ</button></a>
+      <a href="/html/home.html"><button type="submit" value="boost" class="next_btn" id="reservation_next">次へ</button></a>
     </div>
   </footer>
 

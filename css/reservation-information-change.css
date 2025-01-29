@@ -63,19 +63,19 @@ main{
 
 
 /* 概要 */
-.course_discription{
+#course_discription{
   overflow: auto;
   width: 180px;
   height: 80px;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 .description{
   display: flex;
   align-items: baseline;
-}
-
-.course_discription::-webkit-scrollbar{
-  display: none;
 }
 
 /* プラスボタン */
