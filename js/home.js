@@ -48,22 +48,6 @@ if(selectValue == 0){
     reservation.style.display = 'none'; //予約表を見えないように
 }
 
-// 切り替えるたび
-switchingToggle.addEventListener('change', () => {
-    const selectValue = switchingToggle.value;  //optionのvalue取得
-
-    if(selectValue == 0){
-        //0で予約表表示
-        reservation.style.display = 'block';    //予約表を見えるように
-        review.style.display = 'none';  //レビューを見えないように
-    }else{
-        review.style.display= 'block';  //レビューを見えるように
-        reservation.style.display = 'none'; //予約表を見えないように
-
-    }
-});
-
-
 // 混雑状況ボタン、押したら大きくなる処理
 const congestion_situation = document.querySelectorAll('.congestion_situation'); //混雑状況ボタン
 
@@ -73,7 +57,7 @@ congestion_situation.forEach(button => {
 
         //現在大きく表示されているものがあれば小さくする
         if(document.querySelector('.congestion_Big')){
-            big_value = document.querySelector('.congestion_Big'); //現在大きく表示されているもの
+            var big_value = document.querySelector('.congestion_Big'); //現在大きく表示されているもの
             big_value.classList.remove('congestion_Big');   //大きくするスタイルを外す
             big_value.classList.add('congestion_small');    //小さいときにつけるstyleをつける
         }
@@ -89,6 +73,19 @@ congestion_situation.forEach(button => {
     });
 });
 
+// 切り替えるたび
+switchingToggle.addEventListener('change', () => {
+    const selectValue = switchingToggle.value;  //optionのvalue取得
+
+    if(selectValue == 0){
+        //0で予約表表示
+        reservation.style.display = 'block';    //予約表を見えるように
+        review.style.display = 'none';  //レビューを見えないように
+    }else{
+        review.style.display= 'block';  //レビューを見えるように
+        reservation.style.display = 'none'; //予約表を見えないように
+    }
+});
 
 //　レビュー複製処理
 const review_card = document.getElementById('review_card'); //レビューカード（複製されるもの）
