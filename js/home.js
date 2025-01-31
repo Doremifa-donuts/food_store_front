@@ -23,6 +23,7 @@ fetch(variable.RESERVATION_URL, {
         case 401:   //認証情報が正しくなければログイン画面に遷移
             localStorage.removeItem('JtiToken');
             window.location.href = './login.html';
+            return;
         case 404:
             break;
     }
@@ -36,7 +37,7 @@ fetch(variable.RESERVATION_URL, {
     })
 }).catch(error => {
     //エラー処理
-})
+});
 
 // 初期画面などで
 if(selectValue == 0){
