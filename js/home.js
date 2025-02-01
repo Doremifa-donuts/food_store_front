@@ -7,8 +7,8 @@ const review = document.getElementById('review'); //レビュー表
 const selectValue = switchingToggle.value;  //optionのvalue取得
 const jtiToken = localStorage.getItem('JtiToken');
 
-//予約状況を取得
-fetch(variable.RESERVATION_URL, {
+//レビュー情報を取得
+fetch(variable.REVIEW_URL, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -29,14 +29,13 @@ fetch(variable.RESERVATION_URL, {
     }
 })
 .then(data => {
-    console.log(data);
     const response = Object.values(data.Response.Data);
-    //予約情報を表示する処理
+    //レビュー情報を表示する処理
     response.forEach(item => {
-        console.log(item.UserName);
+        console.log(item.Comment);
     })
 }).catch(error => {
-    //エラー処理
+    console.log(error);
 });
 
 // 初期画面などで
@@ -57,10 +56,71 @@ switchingToggle.addEventListener('change', () => {
         //0で予約表表示
         reservation.style.display = 'block';    //予約表を見えるように
         review.style.display = 'none';  //レビューを見えないように
+        //予約状況を取得
+        fetch(variable.RESERVATION_URL, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jtiToken}`
+            },
+            mode: 'cors',
+        })
+        .then(response => {
+            switch (response.status) {
+                case 200:
+                    return response.json();
+                case 401:   //認証情報が正しくなければログイン画面に遷移
+                    localStorage.removeItem('JtiToken');
+                    window.location.href = './login.html';
+                    return;
+                case 404:
+                    break;
+            }
+        })
+        .then(data => {
+            console.log(data);
+            const response = Object.values(data.Response.Data);
+            //予約情報を表示する処理
+            response.forEach(item => {
+                console.log(item.UserName);
+            })
+        }).catch(error => {
+            //エラー処理
+        });
     }else{
         review.style.display= 'block';  //レビューを見えるように
         reservation.style.display = 'none'; //予約表を見えないように
 
+        //レビュー情報を取得
+        fetch(variable.REVIEW_URL, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jtiToken}`
+            },
+            mode: 'cors',
+        })
+        .then(response => {
+            switch (response.status) {
+                case 200:
+                    return response.json();
+                case 401:   //認証情報が正しくなければログイン画面に遷移
+                    localStorage.removeItem('JtiToken');
+                    window.location.href = './login.html';
+                    return;
+                case 404:
+                    break;
+            }
+        })
+        .then(data => {
+            const response = Object.values(data.Response.Data);
+            //レビュー情報を表示する処理
+            response.forEach(item => {
+                console.log(item.Comment);
+            })
+        }).catch(error => {
+            console.log(error);
+        });
     }
 });
 
