@@ -4,3 +4,4 @@ export const RESTAURANT_URL = API_URL + 'auth/restaurants/';
 export const LOGIN_URL = API_URL + 'login';
 export const RESERVATION_URL = RESTAURANT_URL + 'reservations/';
 export const REVIEW_URL = RESTAURANT_URL + 'reviews';
+export const IMG_URL = API_URL + 'auth/images/';

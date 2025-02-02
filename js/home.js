@@ -1,4 +1,4 @@
-import * as variable from "./variable.js";
+import * as url from "./url.js";
 
 //toggleの選択状況によって表示を変える処理
 const switchingToggle = document.getElementById('switching_toggle'); //select取得
@@ -51,13 +51,13 @@ switchingToggle.addEventListener('change', () => {
         //0で予約表表示
         reservation.style.display = 'block';    //予約表を見えるように
         review.style.display = 'none';  //レビューを見えないように
-        
+
     }else{
         review.style.display= 'block';  //レビューを見えるように
         reservation.style.display = 'none'; //予約表を見えないように
 
         //レビュー情報を取得
-        fetch(variable.REVIEW_URL, {
+        fetch(url.REVIEW_URL, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

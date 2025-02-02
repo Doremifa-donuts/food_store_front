@@ -1,4 +1,4 @@
-import { LOGIN_URL } from "./variable.js";
+import { LOGIN_URL } from "./url.js";
 import * as security from "./security.js";
 
 // ログインボタン
