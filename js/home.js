@@ -42,6 +42,7 @@ congestion_situation.forEach(button => {
     });
 });
 
+
 // 切り替えるたび
 switchingToggle.addEventListener('change', () => {
     const selectValue = switchingToggle.value;  //optionのvalue取得
@@ -50,12 +51,43 @@ switchingToggle.addEventListener('change', () => {
         //0で予約表表示
         reservation.style.display = 'block';    //予約表を見えるように
         review.style.display = 'none';  //レビューを見えないように
+        
     }else{
         review.style.display= 'block';  //レビューを見えるように
         reservation.style.display = 'none'; //予約表を見えないように
+
+        //レビュー情報を取得
+        fetch(variable.REVIEW_URL, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jtiToken}`
+            },
+            mode: 'cors',
+        })
+        .then(response => {
+            switch (response.status) {
+                case 200:
+                    return response.json();
+                case 401:   //認証情報が正しくなければログイン画面に遷移
+                    localStorage.removeItem('JtiToken');
+                    window.location.href = './login.html';
+                    return;
+                case 404:
+                    break;
+            }
+        })
+        .then(data => {
+            const response = Object.values(data.Response.Data);
+            //レビュー情報を表示する処理
+            response.forEach(item => {
+                console.log(item.Comment);
+            })
+        }).catch(error => {
+            console.log(error);
+        });
     }
 });
-
 
 
 //お助けブースト周辺人数が変更される処理

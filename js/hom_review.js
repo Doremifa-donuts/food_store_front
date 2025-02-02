@@ -1,3 +1,35 @@
+//レビュー情報を取得
+fetch(variable.REVIEW_URL, {
+  method: 'GET',
+  headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${jtiToken}`
+  },
+  mode: 'cors',
+})
+.then(response => {
+  switch (response.status) {
+      case 200:
+          return response.json();
+      case 401:   //認証情報が正しくなければログイン画面に遷移
+          localStorage.removeItem('JtiToken');
+          window.location.href = './login.html';
+          return;
+      case 404:
+          break;
+  }
+})
+.then(data => {
+  const response = Object.values(data.Response.Data);
+  //レビュー情報を表示する処理
+  response.forEach(item => {
+      console.log(item.Comment);
+  })
+}).catch(error => {
+  console.log(error);
+});
+
+
 //　レビュー複製処理
 const review_card = document.getElementById('review_card'); //レビューカード（複製されるもの）
 const review_view = document.getElementById('review_view'); //レビューが表示される場所（複製する場所）
