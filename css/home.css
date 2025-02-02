@@ -59,6 +59,7 @@ main {
 
 /* 混雑情報入力ボタン */
 #congestion {
+    width: 260px;
     display: flex;
     align-items: flex-end;
     margin-top: 3vh;
@@ -213,4 +214,5 @@ height: 35px;
     font-size: 30px;
     font-weight: 500;
     margin: 0 10px;
+    transition: all 0.3s;
 }
