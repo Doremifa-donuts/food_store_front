@@ -1,4 +1,5 @@
 import * as variable from "./variable.js";
+const jtiToken = localStorage.getItem('JtiToken');
 
 //予約状況を取得
 fetch(variable.RESERVATION_URL, {
@@ -24,11 +25,11 @@ fetch(variable.RESERVATION_URL, {
   console.log(data);
   const response = Object.values(data.Response.Data); //予約データ
   let listdiv_num = 1
+  
   //予約情報を表示する処理
   response.forEach(item => {
       var NumberOfPeople = item.NumberOfPeople;   //予約人数
-      console.log(hour, minutes, NumberOfPeople);
-
+      
       const reservation_table = document.getElementById('reservation_table'); //予約状況を追加していく
       const reservation_status = document.createElement('div');   //点線をつける行(div)
       const reservation_list = document.createElement('span');    //人数、予約表示(span)
@@ -49,6 +50,7 @@ fetch(variable.RESERVATION_URL, {
       // if(0 < minutes && minutes < 30){
 
       // }
+      console.log(hour, minutes, NumberOfPeople);
       console.log(reservation_status);
   })
 }).catch(error => {
