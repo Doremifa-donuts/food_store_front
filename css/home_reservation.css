@@ -13,34 +13,66 @@
   table-layout: fixed;
   border-collapse: collapse;
 
-  tr{
-      width: 100%;
-      height: calc(100% / 8);
-  }
 }
 
 #reservation_time{
   border-bottom: 3px solid #8EAFBC;
 }
 
+#time_list{
+  display: flex;
+  justify-content: space-around;
+}
+
 .boder{
   border-right: #8EAFBC 2px solid;
 }
 
-#reservation_time th span{
+#reservation_time span{
   font-size: 30px;
   font-weight: 100;
 }
 
-#reservation_time td div{
-  width: 95%;
-  height: 95%;
-}
-
 /* 点線 */
 .reservation_status{
+  display: flex;
+  text-align: start;
+  width: 100%;
+  height: calc(99% / 9);
   background-image : linear-gradient(to right, #8EAFBC, #8EAFBC 3px, transparent 3px, transparent 8px);  /* 幅2の線を作る */
   background-size: 10px 1px;          /* グラデーションの幅・高さを指定 */
   background-position: left bottom;  /* 背景の開始位置を指定 */
   background-repeat: repeat-x;       /* 横向きにのみ繰り返す */
+}
+
+.blue{
+  width: calc((100% / 12)*2 );
+  height: 98%;
+  text-align: center;
+  background-color: #B0C9D3;
+  border-radius: 15px;
+}
+
+#reservation_list2{
+  margin-left: calc((100% / 12)*1);
+}
+
+#reservation_list3{
+  width: calc((100% / 12)*3);
+  margin-left: calc((100% / 12)*5);
+}
+
+#reservation_list4{
+  width: calc((100% / 12)*3);
+  margin-left: calc((100% / 12)*3);
+}
+
+#reservation_list5{
+  width: calc((100% / 12)*2);
+  margin-left: calc((100% / 12)*2);
+}
+
+#reservation_list6{
+  width: calc((100% / 12)*2);
+  margin-left: calc((100% / 12)*2);
 }

@@ -22,7 +22,7 @@
                 <a href="/html/QR-code.html"><img src="/image/qr_code_scanner.png" alt="qr_code" class="header_icon"></a>   <!--QRコード画面表示アイコン-->
             </button>
             <button class="menu_icon">
-                <a href=""><img src="/image/notifications.png" alt="notification" class="header_icon"></a>  <!--通知画面-->
+                <img src="/image/notifications.png" alt="notification" class="header_icon"> <!--通知画面-->
             </button>
             <button class="dialog-open menu_icon" data-dialog="myPageDialog"> <!--マイページダイアログ表示-->
                 <img src="/image/account_circle.png" alt="account" class="header_icon" >
@@ -41,7 +41,6 @@
             <p class="boost_text">人</p>
         </div>
 
-
         <!-- 混雑状況 -->
         <div id="flex_item">
             <!-- 混雑情報選択ボタン -->
@@ -56,14 +55,13 @@
             
         </div>
             
-
         <!-- 表示切り替えボタン -->
         <div id="toggle-btn">
-            <select name="toggle" id="switching_toggle" >
+            <select name="toggle" id="switching_toggle">
                 <option value="0">予約状況</option>
-                <option value="1" selected>レビュー</option>
+                <option value="1">レビュー</option>
             </select>
-            <button id="review_btn">+</button>  
+            <!-- <button id="review_btn">+</button> -->
 
         </div>
 
@@ -72,193 +70,25 @@
             <div id="reservation" class="main_content">
                 <!-- 予約状況表示 -->
                 <div id="reservation_view" class="">
-                    <table id="reservation_table">
-                        <tr id="reservation_time">
-                            <th class="boder">
-                                <span>11</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>12</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>13</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>14</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>15</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>16</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>17</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>18</span> 時  
-                            </th>
-                            <th class="boder">
-                                <span>19</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>20</span> 時
-                            </th>
-                            <th class="boder">
-                                <span>21</span> 時
-                            </th>
-                            <th>
-                                <span>22</span> 時
-                            </th>
-                        </tr>
-                        <tr class="reservation_status">
-                            <td>
-                                
-                            </td>
-                            <td>
-                            
-                            </td>
-                            <td>
-                             
-                            </td>
-                            <td>
-                            
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                               
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                             
-                            </td>
-                            
-                        </tr>
-                        <tr class="reservation_status">
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                        </tr>
-                        <tr class="reservation_status">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="reservation_status">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="reservation_status">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="reservation_status">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr >
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                    <div id="reservation_table">
+                        <div id="reservation_time">
+                            <div id="time_list">
+                                <span>11</span>
+                                <span>12</span>
+                                <span>13</span>
+                                <span>14</span>
+                                <span>15</span>
+                                <span>16</span>
+                                <span>17</span>
+                                <span>18</span>
+                                <span>19</span>
+                                <span>20</span>
+                                <span>21</span>
+                                <span>22</span>
+                            </div>
+                        </div>
+                        <!-- ↓ここに予約状況が追加されていく -->
+                    </div>
                 </div>
             </div>
 
@@ -290,7 +120,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- お助けブーストのダイアログ -->
         <dialog id="boostDialog" class="dialog" >
@@ -337,6 +166,9 @@
     </main>
     <script type="module" src="/js/home.js"></script>
     <script src="/js/common.js"></script>
+    <script type="module" src="/js/home_reservation.js"></script>
+    <script type="module" src="/js/hom_review.js"></script>
+
 </body>
 
 </html>
