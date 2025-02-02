@@ -1,4 +1,4 @@
-import { RESTAURANT_URL } from "./variable.js";
+import { RESTAURANT_URL } from "./url.js";
 //選択された画像を大きく表示
 const imgFile = document.querySelector('#img_file'); //画像選択インプット
 const storeImg = document.querySelector('#store_img'); //画像を表示するimgタグ

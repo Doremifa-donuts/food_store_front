@@ -1,8 +1,8 @@
-import * as variable from "./variable.js";
+import * as url from "./url.js";
 const jtiToken = localStorage.getItem('JtiToken');
 
 //予約状況を取得
-fetch(variable.RESERVATION_URL, {
+fetch(url.RESERVATION_URL, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -19,6 +19,9 @@ fetch(variable.RESERVATION_URL, {
             window.location.href = './login.html';
         case 404:
             break;
+        case 500:
+            localStorage.removeItem('JtiToken');
+            window.location.href = './login.html'
     }
 })
 .then(data => {
