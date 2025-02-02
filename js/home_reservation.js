@@ -46,12 +46,37 @@ fetch(variable.RESERVATION_URL, {
       var hour = ReservationDate.substr(ReservationDate.indexOf('T') + 1, 2); //予約開始時間(時)
       var minutes = ReservationDate.substr(ReservationDate.indexOf('T') + 4, 2);   //予約開始時間(分)
       reservation_list.id = 'reservation_list' + listdiv_num++;   //id名付与
+      var list_id = document.getElementById(reservation_list.id);
+      let hour_time = 0;
 
-      // if(0 < minutes && minutes < 30){
+      //開始位置の計算
+      hour -= 11;
+      //３０分刻み
+      if(0 < minutes && minutes < 30){
+        hour_time = hour + 0.5;
+      }else if(30 < minutes && minutes <= 59){
+        hour_time = hour + 1;
+      }
 
-      // }
+      //開始位置のずれ
+      if(hour == 0){
+        hour_time += 0.1;
+      }else if(hour == 1){
+        hour_time += 0.2;
+      }else if(hour == 2 || hour == 3){
+        hour_time += 0.3;
+      }else if(hour == 4 || hour == 5){
+        hour_time += 0.4;
+      }else if(hour == 6 || hour == 7){
+        hour_time += 0.5;
+      }else if(hour == 8 || hour == 9){
+        hour_time += 0.6;
+      }
+
+      list_id.style.marginLeft = "calc((100% / 12)*"+ hour_time +")";
+
       console.log(hour, minutes, NumberOfPeople);
-      console.log(reservation_status);
+      console.log( list_id);
   })
 }).catch(error => {
   //エラー処理
