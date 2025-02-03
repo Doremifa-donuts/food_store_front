@@ -33,7 +33,7 @@
   display: flex;
   text-align: start;
   width: 100%;
-  height: calc(99% / 9);
+  height: calc(99% / 8.5);
   background-image : linear-gradient(to right, #8EAFBC, #8EAFBC 3px, transparent 3px, transparent 8px);  /* 幅2の線を作る */
   background-size: 10px 1px;          /* グラデーションの幅・高さを指定 */
   background-position: left bottom;  /* 背景の開始位置を指定 */
@@ -46,6 +46,10 @@
   text-align: center;
   background-color: #B0C9D3;
   border-radius: 15px;
+
+  
+  font-size: 15px;
+  
 }
 
 

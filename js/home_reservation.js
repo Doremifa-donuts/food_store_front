@@ -32,13 +32,21 @@ fetch(url.RESERVATION_URL, {
   //予約情報を表示する処理
   response.forEach(item => {
       var NumberOfPeople = item.NumberOfPeople;   //予約人数
+      var UserName = item.UserName;   //名前
+      console.log(UserName);
       
       const reservation_table = document.getElementById('reservation_table'); //予約状況を追加していく
       const reservation_status = document.createElement('div');   //点線をつける行(div)
-      const reservation_list = document.createElement('span');    //人数、予約表示(span)
-      reservation_list.innerHTML = NumberOfPeople + '名';    //spanに人数入力
+      const reservation_list = document.createElement('div');    //人数、予約表示(span)
+      const reservation_num = document.createElement('span');    //人数、予約表示(span)
+      const reservation_name = document.createElement('p');    //人数、予約表示(span)
+      reservation_num.innerHTML = NumberOfPeople + '名';    //spanに人数入力
+      reservation_name.innerHTML = UserName + '様';
+
       reservation_table.appendChild(reservation_status);  //予約表示枠に追加  
       reservation_status.appendChild(reservation_list);   //divの中にspanを入れる
+      reservation_list.appendChild(reservation_num);   
+      reservation_list.appendChild(reservation_name);   
 
       //予約表示style付与
       reservation_status.classList.add('reservation_status'); //点線がつくクラスをつける  
@@ -51,7 +59,7 @@ fetch(url.RESERVATION_URL, {
       reservation_list.id = 'reservation_list' + listdiv_num++;   //id名付与
       var list_id = document.getElementById(reservation_list.id);
       let hour_time = 0;
-
+      
       //開始位置の計算
       hour -= 11;
       //３０分刻み
@@ -60,7 +68,7 @@ fetch(url.RESERVATION_URL, {
       }else if(30 < minutes && minutes <= 59){
         hour_time = hour + 1;
       }
-
+      
       //開始位置のずれ
       if(hour == 0){
         hour_time += 0.1;
@@ -76,6 +84,7 @@ fetch(url.RESERVATION_URL, {
         hour_time += 0.6;
       }
 
+      
       list_id.style.marginLeft = "calc((100% / 12)*"+ hour_time +")";
 
       console.log(hour, minutes, NumberOfPeople);
