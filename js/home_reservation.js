@@ -59,7 +59,7 @@ fetch(url.RESERVATION_URL, {
       reservation_list.id = 'reservation_list' + listdiv_num++;   //id名付与
       var list_id = document.getElementById(reservation_list.id);
       let hour_time = 0;
-      
+      hour = 12;
       //開始位置の計算
       hour -= 11;
       //３０分刻み
