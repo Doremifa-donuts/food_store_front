@@ -24,8 +24,16 @@ close.forEach(button => {
 
 // オーバーレイクリックでダイアログを閉じる
 dialogs.forEach(button => {
-    button.addEventListener('click', (event) => {
-        dialog.classList.remove('show');  //ダイアログ閉じる
-      
-    });
+  button.addEventListener('click', (event) => {
+      dialog.classList.remove('show');  //ダイアログ閉じる
+    
   });
+});
+
+//ログアウト
+const logout_btn = document.getElementById('logout'); //ログアウトボタン
+
+logout_btn.addEventListener('click',() => {
+  localStorage.removeItem('JtiToken');
+  window.location.href = './login.html';  
+});
