@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/QR-code.css">
+    <script src="/js/dist/qrious.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -31,7 +32,7 @@
       </div>
 
       <div id="QR_code_view">
-        <img src="/image/QR_mattuu.png" alt="">
+        <canvas id="qrcode"></canvas>
       </div>
 
       <!--マイページダイアログ -->
@@ -50,5 +51,6 @@
     <!-- script -->
     <script src="/js/" charset="utf-8"></script>
     <script src="/js/common.js" charset="utf-8"></script>
-  </body> 
+    <script type="module" src="/js/qr_code.js" charset="utf-8"></script>
+  </body>
 </html>

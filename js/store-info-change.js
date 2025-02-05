@@ -24,6 +24,9 @@ fetch(RESTAURANT_URL, {
       return;
     case 404:
       break;
+    case 500:
+      localStorage.removeItem('JtiToken');
+      window.location.href = './login.html'
   }
 })
 .then(data => {
