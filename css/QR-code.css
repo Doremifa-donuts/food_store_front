@@ -1,3 +1,7 @@
+main{
+  height: 75vh;
+}
+
 #QR_text{
   text-align: center;
 }
@@ -12,4 +16,8 @@
 
 #QR_code_view{
   text-align: center;
+}
+
+#qrcode{
+  width: 25%;
 }
