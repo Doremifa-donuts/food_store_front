@@ -205,12 +205,48 @@ function review_view() {
     });
 }
 
+//ブースト人数
+function nearby_view() {
+    const boost_num = document.getElementById('boost_num');
+    fetch(url.NEARBY_URL, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jtiToken}`
+        },
+        mode: 'cors',
+    })
+    .then(response => {
+        switch (response.status) {
+            case 200:
+                return response.json();
+            case 401:   //認証情報が正しくなければログイン画面に遷移
+                localStorage.removeItem('JtiToken');
+                window.location.href = './login.html';
+                return;
+            case 404:
+                break;
+            case 500:
+                localStorage.removeItem('JtiToken');
+                window.location.href = './login.html'
+        }
+    })
+    .then(data => {
+        boost_num.innerHTML = data.Response.Data.count;
+    })
+    .catch(error => {
+        console.error('Error fetching boost data:', error);
+    });
+}
+
 // 初期表示
 const selectValue = switchingToggle.value;
 if(selectValue == 0) {
     reservation_view();
+    nearby_view();
 } else {
     review_view();
+    nearby_view();
 }
 
 // 切り替えられたときの処理
@@ -218,15 +254,13 @@ switchingToggle.addEventListener('change', () => {
     const selectValue = switchingToggle.value;
     if(selectValue == 0) {
         reservation_view();
+        nearby_view();
     } else {
         review_view();
+        nearby_view();
     }
 });
 
-//ブースト人数
-const boost_num = document.getElementById('boost_num');
-let boost_people = 7;
-boost_num.innerText = boost_people;
 
 //店舗の空き情報
 const congestion_situation = document.querySelectorAll('.congestion_situation');
