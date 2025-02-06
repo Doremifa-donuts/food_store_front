@@ -25,8 +25,9 @@ close.forEach(button => {
 // オーバーレイクリックでダイアログを閉じる
 dialogs.forEach(button => {
   button.addEventListener('click', (event) => {
+    if(event.target == button) {
       dialog.classList.remove('show');  //ダイアログ閉じる
-    
+    }
   });
 });
 

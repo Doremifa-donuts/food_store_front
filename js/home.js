@@ -1,4 +1,5 @@
 import * as url from "./url.js";
+import * as security from "./security.js"
 
 //toggleの選択状況によって表示を変える処理
 const switchingToggle = document.getElementById('switching_toggle'); //select取得
@@ -315,7 +316,8 @@ congestion_situation.forEach(button => {
                     throw new Error('店舗情報の取得に失敗しました');
                 case 500:
                     localStorage.removeItem('JtiToken');
-                    window.location.href = './login.html'
+                    window.location.href = './login.html';
+                    return;
             }
         })
         .catch(error => {
@@ -329,4 +331,73 @@ congestion_situation.forEach(button => {
             }
         });
     });
+});
+
+const boost_btn = document.getElementById('boost_btn');
+boost_btn.addEventListener('click', () => {
+    let start_at = document.querySelector('input[name="before"]').value;
+    let end_at = document.querySelector('input[name="after"]').value;
+    let great_text = document.getElementById('great_text').value;
+    let situation_text = document.getElementById('situation_text').value;
+
+    //時間が設定されていなかった場合
+    if(!start_at || !end_at) return;
+    //お得情報がなかった場合
+    if(!great_text) return;
+
+    //バリデーション
+    try {
+        great_text = security.escapeHtml(great_text);
+        situation_text = security.escapeHtml(situation_text);
+    }catch (error) {
+        console.log(error);
+        return;
+    }
+
+    //今日の日付を取得
+    const today = new Date();
+    //YYYY-MM-DDを取得する
+    const dateStr = today.toISOString().split('T')[0];
+    //JSTオフセット
+    start_at = new Date(`${dateStr}T${start_at}:00`);
+    end_at = new Date(`${dateStr}T${end_at}:00`);
+    start_at.setHours(start_at.getHours() + 9);
+    end_at.setHours(end_at.getHours() + 9);
+    //時間形式をサーバーが求める形に変換
+    start_at = start_at.toISOString().replace('Z', '+09:00');
+    end_at = end_at.toISOString().replace('Z', '+09:00');
+
+    //ブースト開始
+    fetch(url.CAMPAIGN_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jtiToken}`
+        },
+        body: JSON.stringify({
+            StartAt: start_at,
+            EndAt: end_at,
+            Description: situation_text,
+            DiscountOffer: great_text
+        }),
+        mode: 'cors',
+    })
+    .then(response => {
+        switch (response.status) {
+            case 200:
+                return response.json();
+            case 400:
+                throw new Error('トークンのフォーマットエラーです');
+            case 401:
+                throw new Error('情報が不足しています');
+            case 404:
+                throw new Error('エンドポイントが見つかりません');
+            default:
+                throw new Error('送信に失敗しました');
+        }
+    }).then(data => {
+        console.log('送信しました');
+    }).catch(error => {
+        console.log(error);
+    })
 });

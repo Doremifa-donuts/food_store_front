@@ -7,3 +7,4 @@ export const REVIEW_URL = RESTAURANT_URL + 'reviews';
 export const IMG_URL = API_URL + 'auth/images/';
 export const MODE_URL = RESTAURANT_URL + 'mode/';
 export const NEARBY_URL = RESTAURANT_URL + 'nearby';
+export const CAMPAIGN_URL = RESTAURANT_URL + 'campaigns';
