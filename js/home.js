@@ -231,7 +231,7 @@ boost_num.innerText = boost_people;
 //店舗の空き情報
 const congestion_situation = document.querySelectorAll('.congestion_situation');
 congestion_situation.forEach(button => {
-    button.addEventListener("click", (e) => {
+    button.addEventListener("click", async (e) => {
         const id_value = button.id;
 
         if(document.querySelector('.congestion_Big')){
@@ -246,5 +246,53 @@ congestion_situation.forEach(button => {
         if(select_situation.classList.contains('congestion_Big')){
             select_situation.classList.remove('congestion_small');
         }
+
+        let mode = null;
+        switch(id_value){
+            case 'none':
+                mode = 'Free';
+                break;
+            case 'some':
+                mode = 'Spare';
+                break;
+            case 'full':
+                mode = 'Packed';
+                break;
+        }
+        await fetch(url.MODE_URL + mode, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jtiToken}`
+            },
+            mode: 'cors',
+        })
+        .then(response => {
+            switch (response.status) {
+                case 200:
+                    return response.json();
+                case 400:
+                    throw new Error('店舗情報の更新に失敗しました');
+                case 401:   //認証情報が正しくなければログイン画面に遷移
+                    localStorage.removeItem('JtiToken');
+                    window.location.href = './login.html';
+                    return;
+                case 404:
+                    throw new Error('店舗情報の取得に失敗しました');
+                case 500:
+                    localStorage.removeItem('JtiToken');
+                    window.location.href = './login.html'
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching mode data:', error);
+            // エラー時はボタンの状態を元に戻す
+            select_situation.classList.remove('congestion_Big');
+            select_situation.classList.add('congestion_small');
+            if (big_value) {
+                big_value.classList.remove('congestion_small');
+                big_value.classList.add('congestion_Big');
+            }
+        });
     });
 });
