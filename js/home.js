@@ -240,14 +240,59 @@ function nearby_view() {
     });
 }
 
+//現在の店舗の状態を取得
+function getStatus() {
+    fetch(url.RESTAURANT_URL, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jtiToken}`
+        },
+        mode: 'cors',
+    }).
+    then(response => {
+        switch (response.status) {
+            case 200:
+                return response.json();
+            case 401:   //認証情報が正しくなければログイン画面に遷移
+                localStorage.removeItem('JtiToken');
+                window.location.href = './login.html';
+                return;
+            case 404:
+                break;
+            case 500:
+                localStorage.removeItem('JtiToken');
+                window.location.href = './login.html'
+        }
+    })
+    .then(data => {
+        const status = data.Response.Data.BusyStatus;
+        if(status == 'Free'){
+            congestion_situation[0].classList.remove('congestion_small');
+            congestion_situation[0].classList.add('congestion_Big');
+        }else if(status == 'Spare'){
+            congestion_situation[1].classList.remove('congestion_small');
+            congestion_situation[1].classList.add('congestion_Big');
+        }else if(status == 'Packed'){
+            congestion_situation[2].classList.remove('congestion_small');
+            congestion_situation[2].classList.add('congestion_Big');
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching status:', error);
+    });
+}
+
 // 初期表示
 const selectValue = switchingToggle.value;
 if(selectValue == 0) {
     reservation_view();
     nearby_view();
+    getStatus();
 } else {
     review_view();
     nearby_view();
+    getStatus();
 }
 
 // 切り替えられたときの処理
