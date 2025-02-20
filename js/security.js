@@ -21,3 +21,23 @@ export function escapeHtml(str) {
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
 }
+
+//http通信のステータスコードをチェック
+export function checkStatus(response) {
+    switch (response.status) {
+        case 200:
+            return response.json();
+        case 401:   //認証情報が正しくなければログイン画面に遷移
+            localStorage.removeItem('JtiToken');
+            window.location.href = './login.html';
+            return;
+        case 404:
+            break;
+        case 500:
+            localStorage.removeItem('JtiToken');
+            window.location.href = './login.html';
+            return;
+        default:
+            throw new Error('送信に失敗しました');
+    }
+}

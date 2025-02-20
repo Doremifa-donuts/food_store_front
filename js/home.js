@@ -21,20 +21,7 @@ function reservation_view() {
         },
         mode: 'cors',
     })
-    .then(response => {
-        switch (response.status) {
-            case 200:
-                return response.json();
-            case 401:
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html';
-            case 404:
-                break;
-            case 500:
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html'
-        }
-    })
+    .then(response => security.checkStatus(response))
     .then(data => {
         //予約表を空にする
         while (reservation_table.children.length > 1) {
@@ -118,21 +105,7 @@ function review_view() {
         },
         mode: 'cors',
     })
-    .then(response => {
-        switch (response.status) {
-            case 200:
-                return response.json();
-            case 401:   //認証情報が正しくなければログイン画面に遷移
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html';
-                return;
-            case 404:
-                break;
-            case 500:
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html'
-        }
-    })
+    .then(response => security.checkStatus(response))
     .then(data => {
         const reviews = Object.values(data.Response.Data);
         if (!reviews) return;   //レビュー情報がなければ処理を終了
@@ -217,21 +190,7 @@ function nearby_view() {
         },
         mode: 'cors',
     })
-    .then(response => {
-        switch (response.status) {
-            case 200:
-                return response.json();
-            case 401:   //認証情報が正しくなければログイン画面に遷移
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html';
-                return;
-            case 404:
-                break;
-            case 500:
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html'
-        }
-    })
+    .then(response => security.checkStatus(response))
     .then(data => {
         boost_num.innerHTML = data.Response.Data.count;
     })
@@ -250,21 +209,7 @@ function getStatus() {
         },
         mode: 'cors',
     }).
-    then(response => {
-        switch (response.status) {
-            case 200:
-                return response.json();
-            case 401:   //認証情報が正しくなければログイン画面に遷移
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html';
-                return;
-            case 404:
-                break;
-            case 500:
-                localStorage.removeItem('JtiToken');
-                window.location.href = './login.html'
-        }
-    })
+    then(response => security.checkStatus(response))
     .then(data => {
         const status = data.Response.Data.BusyStatus;
         if(status == 'Free'){
@@ -348,22 +293,7 @@ congestion_situation.forEach(button => {
             mode: 'cors',
         })
         .then(response => {
-            switch (response.status) {
-                case 200:
-                    return response.json();
-                case 400:
-                    throw new Error('店舗情報の更新に失敗しました');
-                case 401:   //認証情報が正しくなければログイン画面に遷移
-                    localStorage.removeItem('JtiToken');
-                    window.location.href = './login.html';
-                    return;
-                case 404:
-                    throw new Error('店舗情報の取得に失敗しました');
-                case 500:
-                    localStorage.removeItem('JtiToken');
-                    window.location.href = './login.html';
-                    return;
-            }
+            security.checkStatus(response);
         })
         .catch(error => {
             console.error('Error fetching mode data:', error);
