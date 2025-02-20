@@ -74,7 +74,12 @@ main{
 
     span{
         margin: 0 10px;
-        font-size: 30px;
+        font-size: 25px;
+    }
+
+    .info_time{
+      display: flex;
+      font-size: 28px;
     }
   }
 
