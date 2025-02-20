@@ -12,6 +12,7 @@ const nameInput = document.getElementById('name');
 const addressInput = document.getElementById('address');
 const urlInput = document.getElementById('url');
 const descriptionTextarea = document.getElementById('description');
+const timeInput = document.getElementById('time');
 const changeButton = document.querySelector('.next_btn');
 
 fetch(url.RESTAURANT_URL, {
@@ -31,6 +32,7 @@ fetch(url.RESTAURANT_URL, {
   addressInput.value = restaurantDetail.Address;
   urlInput.value = restaurantDetail.Url;
   descriptionTextarea.value = restaurantDetail.Summary;
+  timeInput.value = restaurantDetail.BusinessHours;
   //画像表示
   fetch (url.IMG_URL && restaurantDetail.Images[0], {
     method: 'GET',

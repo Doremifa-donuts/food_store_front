@@ -62,7 +62,7 @@ main{
 }
 
 /* 営業時間 */
-#store_time{
+/* #store_time{
 
   #time{
     width: 250px;
@@ -82,10 +82,10 @@ main{
     }
   }
 
-}
+} */
 
 /* 時間入力欄 */
-input[type="time"]{
+/* input[type="time"]{
   width: 70px;
   background-color: #ffffff00;
   font-size: 30px;
@@ -99,7 +99,7 @@ background: none;
 position: absolute;
 width: 65px;
 height: 35px;
-}
+} */
 
 
 
