@@ -61,6 +61,12 @@ main{
   }
 }
 
+#time{
+  width: 250px;
+  height: 60px;
+  overflow-wrap: break-all;
+}
+
 /* 営業時間 */
 /* #store_time{
 
